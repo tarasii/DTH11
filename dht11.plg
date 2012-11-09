@@ -1,0 +1,586 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\PRG\Keil\ARM\Boards\ST\STM32L-Discovery\DTH11\dht11.uvproj
+Project File Date:  11/07/2012
+
+<h2>Output:</h2>
+Build target 'Target 1'
+creating preprocessor file for onewire.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling onewire.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for main.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling main.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for ext_lcd.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling ext_lcd.c...
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #84: invalid combination of type specifiers
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+assembling startup_stm32l1xx_md.s...
+creating preprocessor file for stm32l1xx_tim.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_tim.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_rtc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_rtc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_rcc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_rcc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_adc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_adc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_dac.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_dac.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_dma.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_dma.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_gpio.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_gpio.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for misc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling misc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_usart.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_usart.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling onewire.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for main.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling main.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling ext_lcd.c...
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #84: invalid combination of type specifiers
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for system_stm32l1xx.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling system_stm32l1xx.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_tim.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_rtc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_rcc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_adc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_dac.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_dma.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_gpio.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling misc.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_usart.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+creating preprocessor file for stm32l1xx_syscfg.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+compiling stm32l1xx_syscfg.c...
+..\..\..\..\INC\ST\STM32L1xx\stm32l1xx.h(6101): error:  #5: cannot open source input file "stm32l1xx_conf.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling onewire.c...
+compiling main.c...
+ext_lcd.h(44): error:  #84: invalid combination of type specifiers
+main.c(68): warning:  #177-D: variable "i" was declared but never referenced
+main.c(68): warning:  #177-D: variable "curx" was declared but never referenced
+main.c(68): warning:  #177-D: variable "buftime" was declared but never referenced
+main.c(69): warning:  #177-D: variable "dt" was declared but never referenced
+main.c(71): warning:  #177-D: variable "datetime" was declared but never referenced
+main.c(77): warning:  #177-D: variable "num_ow" was declared but never referenced
+compiling ext_lcd.c...
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #20: identifier "uint8_t" is undefined
+ext_lcd.h(44): error:  #84: invalid combination of type specifiers
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(17): error:  #7: unrecognized token
+ext_lcd.c(17): error:  #65: expected a ";"
+ext_lcd.c(17): error:  #7: unrecognized token
+ext_lcd.c(17): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+ext_lcd.c(45): error:  #7: unrecognized token
+ext_lcd.c(45): error:  #65: expected a ";"
+ext_lcd.c(104): error:  #20: identifier "EXT_LCD_DELAY" is undefined
+compiling system_stm32l1xx.c...
+compiling stm32l1xx_tim.c...
+compiling stm32l1xx_rtc.c...
+compiling stm32l1xx_rcc.c...
+compiling stm32l1xx_adc.c...
+compiling stm32l1xx_dac.c...
+compiling stm32l1xx_dma.c...
+compiling stm32l1xx_gpio.c...
+compiling misc.c...
+compiling stm32l1xx_usart.c...
+compiling stm32l1xx_syscfg.c...
+Target not created
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(68): warning:  #177-D: variable "i" was declared but never referenced
+main.c(68): warning:  #177-D: variable "curx" was declared but never referenced
+main.c(68): warning:  #177-D: variable "buftime" was declared but never referenced
+main.c(69): warning:  #177-D: variable "dt" was declared but never referenced
+main.c(71): warning:  #177-D: variable "datetime" was declared but never referenced
+main.c(77): warning:  #177-D: variable "num_ow" was declared but never referenced
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(41): error:  #7: unrecognized token
+ext_lcd.c(41): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(41): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+ext_lcd.c(103): error:  #20: identifier "EXT_LCD_DELAY" is undefined
+ext_lcd.c(112): error:  #20: identifier "EXT_LCD_DELAY_LONG" is undefined
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(34): error:  #7: unrecognized token
+ext_lcd.c(34): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(34): error:  #65: expected a ";"
+ext_lcd.c(35): error:  #7: unrecognized token
+ext_lcd.c(35): error:  #65: expected a ";"
+ext_lcd.c(36): error:  #7: unrecognized token
+ext_lcd.c(36): error:  #65: expected a ";"
+ext_lcd.c(37): error:  #7: unrecognized token
+ext_lcd.c(37): error:  #65: expected a ";"
+ext_lcd.c(54): warning:  #223-D: function "WriteCtrl16" declared implicitly
+ext_lcd.c(102): error:  #20: identifier "EXT_LCD_DELAY_LONG" is undefined
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(34): error:  #7: unrecognized token
+ext_lcd.c(34): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(34): error:  #65: expected a ";"
+ext_lcd.c(35): error:  #7: unrecognized token
+ext_lcd.c(35): error:  #65: expected a ";"
+ext_lcd.c(36): error:  #7: unrecognized token
+ext_lcd.c(36): error:  #65: expected a ";"
+ext_lcd.c(37): error:  #7: unrecognized token
+ext_lcd.c(37): error:  #65: expected a ";"
+ext_lcd.c(102): error:  #20: identifier "EXT_LCD_DELAY_LONG" is undefined
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(16): error:  #7: unrecognized token
+ext_lcd.c(16): error:  #65: expected a ";"
+ext_lcd.c(34): error:  #7: unrecognized token
+ext_lcd.c(34): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(34): error:  #65: expected a ";"
+ext_lcd.c(35): error:  #7: unrecognized token
+ext_lcd.c(35): error:  #65: expected a ";"
+ext_lcd.c(36): error:  #7: unrecognized token
+ext_lcd.c(36): error:  #65: expected a ";"
+ext_lcd.c(37): error:  #7: unrecognized token
+ext_lcd.c(37): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(68): warning:  #177-D: variable "i" was declared but never referenced
+main.c(68): warning:  #177-D: variable "curx" was declared but never referenced
+main.c(68): warning:  #177-D: variable "buftime" was declared but never referenced
+main.c(69): warning:  #177-D: variable "dt" was declared but never referenced
+main.c(71): warning:  #177-D: variable "datetime" was declared but never referenced
+main.c(77): warning:  #177-D: variable "num_ow" was declared but never referenced
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(41): error:  #7: unrecognized token
+ext_lcd.c(41): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(41): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(18): error:  #158: expression must be an lvalue or a function designator
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(41): error:  #7: unrecognized token
+ext_lcd.c(41): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(41): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(20): error:  #7: unrecognized token
+ext_lcd.c(20): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(41): error:  #7: unrecognized token
+ext_lcd.c(41): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(41): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(21): error:  #7: unrecognized token
+ext_lcd.c(21): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(22): error:  #7: unrecognized token
+ext_lcd.c(22): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(23): error:  #7: unrecognized token
+ext_lcd.c(23): error:  #65: expected a ";"
+ext_lcd.c(24): error:  #7: unrecognized token
+ext_lcd.c(24): error:  #65: expected a ";"
+ext_lcd.c(24): error:  #7: unrecognized token
+ext_lcd.c(24): error:  #65: expected a ";"
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+ext_lcd.c(45): error:  #7: unrecognized token
+ext_lcd.c(45): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+ext_lcd.c(45): error:  #7: unrecognized token
+ext_lcd.c(45): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(42): error:  #7: unrecognized token
+ext_lcd.c(42): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(42): error:  #65: expected a ";"
+ext_lcd.c(43): error:  #7: unrecognized token
+ext_lcd.c(43): error:  #65: expected a ";"
+ext_lcd.c(44): error:  #7: unrecognized token
+ext_lcd.c(44): error:  #65: expected a ";"
+ext_lcd.c(45): error:  #7: unrecognized token
+ext_lcd.c(45): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(12): error:  #7: unrecognized token
+ext_lcd.c(12): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(12): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(12): error:  #7: unrecognized token
+ext_lcd.c(12): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(12): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(12): error:  #7: unrecognized token
+ext_lcd.c(12): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(12): error:  #65: expected a ";"
+ext_lcd.c(13): error:  #7: unrecognized token
+ext_lcd.c(13): error:  #65: expected a ";"
+ext_lcd.c(14): error:  #7: unrecognized token
+ext_lcd.c(14): error:  #65: expected a ";"
+ext_lcd.c(15): error:  #7: unrecognized token
+ext_lcd.c(15): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+linking...
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol DATA_EEPROM_ProgramWord (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol DATA_EEPROM_Unlock (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol EXTI_ClearITPendingBit (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol EXTI_Init (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol FLASH_ClearFlag (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol Init_ext_GLCD_GPIOs (referred from main.o).
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol PWR_RTCAccessCmd (referred from main.o).
+Target not created
+Build target 'Target 1'
+creating preprocessor file for stm32l1xx_pwr.c...
+compiling stm32l1xx_pwr.c...
+creating preprocessor file for stm32l1xx_flash.c...
+compiling stm32l1xx_flash.c...
+creating preprocessor file for stm32l1xx_exti.c...
+compiling stm32l1xx_exti.c...
+linking...
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol Init_ext_GLCD_GPIOs (referred from main.o).
+Target not created
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(83): warning:  #223-D: function "Init_ext_GLCD_GPIOs" declared implicitly
+main.c(68): warning:  #177-D: variable "i" was declared but never referenced
+main.c(68): warning:  #177-D: variable "curx" was declared but never referenced
+main.c(68): warning:  #177-D: variable "buftime" was declared but never referenced
+main.c(69): warning:  #177-D: variable "dt" was declared but never referenced
+main.c(71): warning:  #177-D: variable "datetime" was declared but never referenced
+main.c(77): warning:  #177-D: variable "num_ow" was declared but never referenced
+linking...
+.\Obj\dht11.axf: Error: L6218E: Undefined symbol Init_ext_GLCD_GPIOs (referred from main.o).
+Target not created
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+main.c(68): warning:  #177-D: variable "i" was declared but never referenced
+main.c(68): warning:  #177-D: variable "curx" was declared but never referenced
+main.c(68): warning:  #177-D: variable "buftime" was declared but never referenced
+main.c(69): warning:  #177-D: variable "dt" was declared but never referenced
+main.c(71): warning:  #177-D: variable "datetime" was declared but never referenced
+main.c(77): warning:  #177-D: variable "num_ow" was declared but never referenced
+linking...
+Program Size: Code=18460 RO-data=276 RW-data=136 ZI-data=1168  
+".\Obj\dht11.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=18460 RO-data=276 RW-data=136 ZI-data=1168  
+".\Obj\dht11.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(30): error:  #7: unrecognized token
+ext_lcd.c(30): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(30): error:  #65: expected a ";"
+ext_lcd.c(30): error:  #7: unrecognized token
+ext_lcd.c(30): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+linking...
+Program Size: Code=18460 RO-data=276 RW-data=136 ZI-data=1168  
+".\Obj\dht11.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+ext_lcd.c(12): error:  #7: unrecognized token
+ext_lcd.c(12): error:  #20: identifier "GPIO" is undefined
+ext_lcd.c(12): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+linking...
+Program Size: Code=18472 RO-data=276 RW-data=136 ZI-data=1168  
+".\Obj\dht11.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for ext_lcd.c...
+compiling ext_lcd.c...
+linking...
+Program Size: Code=18584 RO-data=276 RW-data=136 ZI-data=1168  
+".\Obj\dht11.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Erase Failed!
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
+Load "C:\\PRG\\Keil\\ARM\\Boards\\ST\\STM32L-Discovery\\DTH11\\Obj\\dht11.AXF" 
