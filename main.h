@@ -5,7 +5,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "utils.h"
 #include "ext_lcd.h"
-#include "onewire.h"
+
+#define MAX_TICS 10000
 
 //HCH1000+555
 #define capasitive_coefficient  6492.0 //0,693*(51+2*560)*8
@@ -77,8 +78,6 @@ void configureADC_Temp(void);
 void DAC_Config(void);
 void configureDMA(void);
 void processTempData(void);
-uint16_t GetTemperature(uint8_t *idbuf);
-float CalculateTemperature(uint16_t dirtytemp);
 void acquireTemperatureData(void);
 void setADCDMA_TransferComplete(void);
 void clearADCDMA_TransferComplete(void);

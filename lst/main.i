@@ -221,7 +221,7 @@ typedef enum IRQn
 
  
 
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
  
 
 
@@ -290,7 +290,7 @@ typedef enum IRQn
 
 
 
-#line 89 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 89 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
 
  
@@ -301,9 +301,9 @@ typedef enum IRQn
 
 
 
-#line 119 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 119 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
-#line 1 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 1 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
  
  
 
@@ -321,7 +321,7 @@ typedef enum IRQn
 
 
 
-#line 25 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 25 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
 
 
@@ -486,7 +486,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 196 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 196 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
      
 
@@ -519,15 +519,15 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 260 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 260 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
 
 
  
 
 
-#line 121 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
+#line 121 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
  
 
 
@@ -794,12 +794,12 @@ __attribute__((section(".revsh_text"))) static __inline __asm int32_t __REVSH(in
 
 
 
-#line 615 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
+#line 615 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
 
    
 
-#line 122 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
+#line 122 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
  
 
 
@@ -1058,27 +1058,17 @@ static __inline void __set_FAULTMASK(uint32_t faultMask)
 
 
 
-#line 293 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
+#line 293 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
 
 
-#line 612 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
-
- 
-
-
-#line 123 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-
-
-
-
-
-
-
+#line 612 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
 
  
-#line 153 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
- 
+
+#line 123 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+
+
 
 
 
@@ -1086,7 +1076,17 @@ static __inline void __set_FAULTMASK(uint32_t faultMask)
 
 
  
-#line 169 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 153 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+
+ 
+
+
+
+
+
+
+ 
+#line 169 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
  
 
@@ -1308,7 +1308,7 @@ typedef struct
 
 
 
-#line 396 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 396 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
  
 
@@ -2132,9 +2132,9 @@ typedef struct
  
 
  
-#line 1227 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1227 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
-#line 1236 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1236 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
 
 
@@ -12391,7 +12391,7 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 
  
 #line 7 "utils.h"
-#line 1 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdio.h"
+#line 1 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdio.h"
  
  
  
@@ -12417,7 +12417,7 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 
 
 
-#line 34 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdio.h"
+#line 34 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdio.h"
 
 
   
@@ -12484,7 +12484,7 @@ typedef struct __FILE FILE;
 extern FILE __stdin, __stdout, __stderr;
 extern FILE *__aeabi_stdin, *__aeabi_stdout, *__aeabi_stderr;
 
-#line 125 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdio.h"
+#line 125 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdio.h"
     
 
     
@@ -13233,7 +13233,7 @@ extern __declspec(__nothrow) void __use_no_semihosting(void);
 
 
 
-#line 944 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdio.h"
+#line 944 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdio.h"
 
 
 
@@ -13318,12 +13318,6 @@ void LCD_OFF(void);
 
 
 #line 8 "main.h"
-#line 1 "onewire.h"
-
-
-
-#line 5 "onewire.h"
-#line 6 "onewire.h"
 
 
 
@@ -13343,29 +13337,8 @@ void LCD_OFF(void);
 
 
 
-uint8_t OW_Send(uint8_t sendReset, uint8_t *command, uint8_t cLen, uint8_t *data, uint8_t dLen, uint8_t readStart);
-uint8_t OW_Scan(uint8_t *buf, uint8_t num);
 
-#line 9 "main.h"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#line 33 "main.h"
+#line 34 "main.h"
 
 
 
@@ -13413,8 +13386,6 @@ void configureADC_Temp(void);
 void DAC_Config(void);
 void configureDMA(void);
 void processTempData(void);
-uint16_t GetTemperature(uint8_t *idbuf);
-float CalculateTemperature(uint16_t dirtytemp);
 void acquireTemperatureData(void);
 void setADCDMA_TransferComplete(void);
 void clearADCDMA_TransferComplete(void);
@@ -13483,14 +13454,31 @@ void DMA1_Channel1_IRQHandler    (void)
   setADCDMA_TransferComplete();   
 }
 
-
+uint16_t read_cycle(uint16_t cur_tics, uint8_t neg_tic){
+	uint16_t cnt_tics;
+ 	if (cur_tics < 10000) cnt_tics = 0;
+	if (neg_tic){
+		while (!GPIO_ReadInputDataBit(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)),((uint16_t)0x0008))&&(cnt_tics<10000)){
+			cnt_tics++;
+		}
+	}
+	else {
+		while (GPIO_ReadInputDataBit(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)),((uint16_t)0x0008))&&(cnt_tics<10000)){
+			cnt_tics++;
+		}
+	}
+ 	return cnt_tics;
+}
 
 int main(void){
-	
-	uint8_t buf[5], res;
+	uint8_t i, j;
+	uint8_t buf[5];
 	
 	
 	char strDisp[25];
+	
+	uint16_t cnt;
+	uint16_t dt[83];
 	
 	
 	
@@ -13537,14 +13525,39 @@ int main(void){
  				 
  		
 
- 		
- 		
+ 		RTC_GetTime(((uint32_t)0x000000000), &RTCTimeStr);
+ 		RTC_GetDate(((uint32_t)0x000000000), &RTCDateStr);
 		
 		
-		res = OW_Send(1, "\xff", 1, buf, 5, 0);
-
 		
-
+ 		((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRH = ((uint16_t)0x0004);
+		Delay(18);
+ 		((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
+		
+ 		cnt = 0; 
+		for(i=0;i<83 && cnt<10000;i++){
+			cnt = read_cycle(cnt, i & 1);
+			dt[i]= cnt;
+		}
+		
+ 		j=0; j = 0;
+ 		for(i=2;i<42;i++){
+ 				if (dt[i*2]>20) {
+ 					buf[j]= (buf[j]<<1) + 1;
+ 					
+ 				}
+ 				else {
+ 					buf[j]=(buf[j]<<1);
+ 					
+ 				}
+				if (!((i-2)%8) && (i>2)) {
+ 					j++;
+				}
+ 			}
+ 				
+		
+	Delay(600);
+		((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
 		
 		switch (mode){
 			case 0:				
@@ -13558,12 +13571,26 @@ int main(void){
 					
 				}
 				
- 				
+ 				sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
+ 				GotoXY(0,0);
+ 				Write_LCD((unsigned char *) strDisp);
+
+				
+				
+
+
+
+				
+				
+				
+				
  				
  				
 
 				
-				sprintf(strDisp, "%d %02x%02x%02x%02x%02x", res, buf[0],buf[1],buf[2],buf[3],buf[4]);
+				
+				
+				sprintf(strDisp, "%d %d %d %d %x", buf[0], buf[1], buf[2], buf[3], buf[4]);
  				GotoXY(0,1);
  				Write_LCD((unsigned char *) strDisp);
 
@@ -13723,49 +13750,9 @@ void processTempData(void)
 	
 }
 
-uint16_t GetTemperature(uint8_t *idbuf){
-	uint16_t dirtytemp;
- 	uint8_t buf[2];
- 	uint8_t cmd[12];
- 	uint8_t i;
-	
 
 
 
- 	
-	cmd[0]=0x55;
-	for (i=1;i<9;i++)
-	{
-		cmd[i]=idbuf[i-1];
-	}
-	cmd[9]=0x44;
-	
- 	OW_Send(1, cmd, 10, 0, 0, 0xff);
-  
-	Delay(10);
-	
-	cmd[9]=0xbe;
-	cmd[10]=0xff;
-	cmd[11]=0xff;
-  OW_Send(1, cmd, 12, buf, 2, 10);
-	
-	dirtytemp = buf[1]*0x100+buf[0];
-	
-	return dirtytemp;
-}
-
-
-
-float CalculateTemperature(uint16_t dirtytemp){
-	float temp;
-	if( dirtytemp > 1000 ) { 
-		dirtytemp = 4096 - dirtytemp; 
-		dirtytemp = -dirtytemp; 
-	}
-	temp = dirtytemp * 0.0625;
-	if (temp>125){temp=0;}
-	return temp;
-}
 
 
 
@@ -13838,7 +13825,7 @@ void RCC_Configuration(void){
 
 void Init_GPIOs (void){
   GPIO_InitTypeDef GPIO_InitStructure;
-	USART_InitTypeDef USART_InitStructure;
+
   
 
   EXTI_InitTypeDef EXTI_InitStructure;
@@ -13907,35 +13894,37 @@ void Init_GPIOs (void){
 
 	
 	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0004);
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
   
   
   
   GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
+	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
 		
-  GPIO_PinAFConfig(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), ((uint8_t)0x02), ((uint8_t)0x07));
+
 
 	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0008);
-	
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
   
   
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+  
 	GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
 		
-  GPIO_PinAFConfig(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), ((uint8_t)0x03), ((uint8_t)0x07));
 
-	USART_InitStructure.USART_BaudRate = 115200;
-	USART_InitStructure.USART_WordLength = ((uint16_t)0x0000);
-	USART_InitStructure.USART_StopBits = ((uint16_t)0x0000);
-	USART_InitStructure.USART_Parity = ((uint16_t)0x0000);
-	USART_InitStructure.USART_HardwareFlowControl = ((uint16_t)0x0000);
-	USART_InitStructure.USART_Mode = ((uint16_t)0x0008) | ((uint16_t)0x0004);
 
-	USART_Init(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), &USART_InitStructure);
-	USART_Cmd(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), ENABLE);
+
+
+
+
+
+
+
+
+
 
  
   GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0010)  ;                               

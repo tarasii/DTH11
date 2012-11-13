@@ -316,7 +316,7 @@ typedef enum IRQn
 
  
 
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
  
 
 
@@ -385,7 +385,7 @@ typedef enum IRQn
 
 
 
-#line 89 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 89 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
 
  
@@ -396,9 +396,9 @@ typedef enum IRQn
 
 
 
-#line 119 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 119 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
-#line 1 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 1 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
  
  
 
@@ -416,7 +416,7 @@ typedef enum IRQn
 
 
 
-#line 25 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 25 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
 
 
@@ -581,7 +581,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 196 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 196 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
      
 
@@ -614,15 +614,15 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 260 "C:\\PRG\\Keil\\ARM\\RV31\\Inc\\stdint.h"
+#line 260 "C:\\PRG\\keil\\ARM\\RV31\\Inc\\stdint.h"
 
 
 
  
 
 
-#line 121 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
+#line 121 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
  
 
 
@@ -889,12 +889,12 @@ __attribute__((section(".revsh_text"))) static __inline __asm int32_t __REVSH(in
 
 
 
-#line 615 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
+#line 615 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmInstr.h"
 
    
 
-#line 122 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-#line 1 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
+#line 122 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
  
 
 
@@ -1153,27 +1153,17 @@ static __inline void __set_FAULTMASK(uint32_t faultMask)
 
 
 
-#line 293 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
+#line 293 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
 
 
-#line 612 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
-
- 
-
-
-#line 123 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
-
-
-
-
-
-
-
+#line 612 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cmFunc.h"
 
  
-#line 153 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
- 
+
+#line 123 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+
+
 
 
 
@@ -1181,7 +1171,17 @@ static __inline void __set_FAULTMASK(uint32_t faultMask)
 
 
  
-#line 169 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 153 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+
+ 
+
+
+
+
+
+
+ 
+#line 169 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
  
 
@@ -1403,7 +1403,7 @@ typedef struct
 
 
 
-#line 396 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 396 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
  
 
@@ -2227,9 +2227,9 @@ typedef struct
  
 
  
-#line 1227 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1227 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
-#line 1236 "C:\\PRG\\Keil\\ARM\\CMSIS\\Include\\core_cm3.h"
+#line 1236 "C:\\PRG\\keil\\ARM\\CMSIS\\Include\\core_cm3.h"
 
 
 
@@ -6388,3 +6388,6774 @@ typedef struct
 
   
 
+#line 1 ".\\stm32l1xx_conf.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+ 
+ 
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 1 "..\\..\\..\\..\\INC\\ST\\STM32L1xx\\stm32l1xx.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+    
+#line 6131 "..\\..\\..\\..\\INC\\ST\\STM32L1xx\\stm32l1xx.h"
+
+
+
+ 
+
+  
+
+ 
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+  
+typedef struct
+{
+  uint32_t ADC_Resolution;                
+ 
+  
+  FunctionalState ADC_ScanConvMode;       
+
+ 
+  
+  FunctionalState ADC_ContinuousConvMode; 
+
+ 
+  
+  uint32_t ADC_ExternalTrigConvEdge;      
+
+ 
+  
+  uint32_t ADC_ExternalTrigConv;          
+
+ 
+  
+  uint32_t ADC_DataAlign;                 
+ 
+  
+  uint8_t  ADC_NbrOfConversion;           
+
+ 
+}ADC_InitTypeDef;
+
+typedef struct 
+{                                              
+  uint32_t ADC_Prescaler;                 
+
+ 
+}ADC_CommonInitTypeDef;
+
+ 
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+#line 196 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+#line 243 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+
+
+
+
+#line 262 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+  
+
+
+
+  
+
+#line 278 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+#line 287 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+  
+
+
+
+  
+
+#line 303 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+#line 312 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+#line 377 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+#line 408 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+#line 416 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+
+
+  
+
+
+
+  
+  
+
+
+
+
+ 
+
+
+
+
+  
+
+
+
+  
+  
+#line 448 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_adc.h"
+  
+
+   
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+ 
+   
+
+
+
+
+  
+
+
+
+ 
+   
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+ 
+   
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+ 
+   
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+    
+void ADC_DeInit(ADC_TypeDef* ADCx); 
+
+  
+void ADC_Init(ADC_TypeDef* ADCx, ADC_InitTypeDef* ADC_InitStruct);
+void ADC_StructInit(ADC_InitTypeDef* ADC_InitStruct);
+void ADC_CommonInit(ADC_CommonInitTypeDef* ADC_CommonInitStruct);
+void ADC_CommonStructInit(ADC_CommonInitTypeDef* ADC_CommonInitStruct);
+void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+
+ 
+void ADC_PowerDownCmd(ADC_TypeDef* ADCx, uint32_t ADC_PowerDown, FunctionalState NewState);
+void ADC_DelaySelectionConfig(ADC_TypeDef* ADCx, uint8_t ADC_DelayLength);
+
+ 
+void ADC_AnalogWatchdogCmd(ADC_TypeDef* ADCx, uint32_t ADC_AnalogWatchdog);
+void ADC_AnalogWatchdogThresholdsConfig(ADC_TypeDef* ADCx, uint16_t HighThreshold,uint16_t LowThreshold);
+void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel);
+
+ 
+void ADC_TempSensorVrefintCmd(FunctionalState NewState);
+
+ 
+void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
+void ADC_SoftwareStartConv(ADC_TypeDef* ADCx);
+FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);
+void ADC_EOCOnEachRegularChannelCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_ContinuousModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_DiscModeChannelCountConfig(ADC_TypeDef* ADCx, uint8_t Number);
+void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+uint16_t ADC_GetConversionValue(ADC_TypeDef* ADCx);
+
+ 
+void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_DMARequestAfterLastTransferCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+
+ 
+void ADC_InjectedChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
+void ADC_InjectedSequencerLengthConfig(ADC_TypeDef* ADCx, uint8_t Length);
+void ADC_SetInjectedOffset(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel, uint16_t Offset);
+void ADC_ExternalTrigInjectedConvConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConv);
+void ADC_ExternalTrigInjectedConvEdgeConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConvEdge);
+void ADC_SoftwareStartInjectedConv(ADC_TypeDef* ADCx);
+FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);
+void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
+uint16_t ADC_GetInjectedConversionValue(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel);
+
+ 
+void ADC_ITConfig(ADC_TypeDef* ADCx, uint16_t ADC_IT, FunctionalState NewState);
+FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint16_t ADC_FLAG);
+void ADC_ClearFlag(ADC_TypeDef* ADCx, uint16_t ADC_FLAG);
+ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, uint16_t ADC_IT);
+void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 29 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_crc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_crc.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+void CRC_ResetDR(void);
+uint32_t CRC_CalcCRC(uint32_t Data);
+uint32_t CRC_CalcBlockCRC(uint32_t pBuffer[], uint32_t BufferLength);
+uint32_t CRC_GetCRC(void);
+void CRC_SetIDRegister(uint8_t IDValue);
+uint8_t CRC_GetIDRegister(void);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 30 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+  
+typedef struct
+{
+  uint32_t COMP_Speed;               
+ 
+  uint32_t COMP_InvertingInput;      
+ 
+  uint32_t COMP_OutputSelect;        
+ 
+   
+}COMP_InitTypeDef;
+
+ 
+   
+
+
+  
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+  
+
+
+
+ 
+
+#line 94 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+#line 103 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+
+  
+
+
+
+ 
+
+#line 119 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+#line 128 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_comp.h"
+
+
+  
+  
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+  
+
+
+  
+
+ 
+ 
+
+ 
+void COMP_DeInit(void);
+
+ 
+void COMP_Init(COMP_InitTypeDef* COMP_InitStruct);
+void COMP_Cmd(FunctionalState NewState);
+uint8_t COMP_GetOutputLevel(uint32_t COMP_Selection);
+
+ 
+void COMP_WindowCmd(FunctionalState NewState);
+
+ 
+void COMP_VrefintOutputCmd(FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+ 
+#line 31 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+ 
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+  
+typedef struct
+{
+  uint32_t DAC_Trigger;                      
+ 
+
+  uint32_t DAC_WaveGeneration;               
+
+ 
+
+  uint32_t DAC_LFSRUnmask_TriangleAmplitude; 
+
+ 
+
+  uint32_t DAC_OutputBuffer;                 
+ 
+}DAC_InitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+  
+#line 84 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+#line 93 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+                                 
+
+
+ 
+  
+
+
+ 
+
+#line 108 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+
+ 
+  
+
+
+ 
+
+#line 140 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+#line 165 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 203 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dac.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+   
+void DAC_DeInit(void);
+
+ 
+void DAC_Init(uint32_t DAC_Channel, DAC_InitTypeDef* DAC_InitStruct);
+void DAC_StructInit(DAC_InitTypeDef* DAC_InitStruct);
+void DAC_Cmd(uint32_t DAC_Channel, FunctionalState NewState);
+void DAC_SoftwareTriggerCmd(uint32_t DAC_Channel, FunctionalState NewState);
+void DAC_DualSoftwareTriggerCmd(FunctionalState NewState);
+void DAC_WaveGenerationCmd(uint32_t DAC_Channel, uint32_t DAC_Wave, FunctionalState NewState);
+void DAC_SetChannel1Data(uint32_t DAC_Align, uint16_t Data);
+void DAC_SetChannel2Data(uint32_t DAC_Align, uint16_t Data);
+void DAC_SetDualChannelData(uint32_t DAC_Align, uint16_t Data2, uint16_t Data1);
+uint16_t DAC_GetDataOutputValue(uint32_t DAC_Channel);
+
+ 
+void DAC_DMACmd(uint32_t DAC_Channel, FunctionalState NewState);
+
+ 
+void DAC_ITConfig(uint32_t DAC_Channel, uint32_t DAC_IT, FunctionalState NewState);
+FlagStatus DAC_GetFlagStatus(uint32_t DAC_Channel, uint32_t DAC_FLAG);
+void DAC_ClearFlag(uint32_t DAC_Channel, uint32_t DAC_FLAG);
+ITStatus DAC_GetITStatus(uint32_t DAC_Channel, uint32_t DAC_IT);
+void DAC_ClearITPendingBit(uint32_t DAC_Channel, uint32_t DAC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 32 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dbgmcu.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dbgmcu.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+
+
+
+
+
+#line 65 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dbgmcu.h"
+
+
+
+
+
+
+
+
+  
+
+ 
+ 
+
+uint32_t DBGMCU_GetREVID(void);
+uint32_t DBGMCU_GetDEVID(void);
+void DBGMCU_Config(uint32_t DBGMCU_Periph, FunctionalState NewState);
+void DBGMCU_APB1PeriphConfig(uint32_t DBGMCU_Periph, FunctionalState NewState);
+void DBGMCU_APB2PeriphConfig(uint32_t DBGMCU_Periph, FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 33 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+#line 354 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 34 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_exti.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_exti.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef enum
+{
+  EXTI_Mode_Interrupt = 0x00,
+  EXTI_Mode_Event = 0x04
+}EXTIMode_TypeDef;
+
+
+
+
+
+ 
+
+typedef enum
+{
+  EXTI_Trigger_Rising = 0x08,
+  EXTI_Trigger_Falling = 0x0C,  
+  EXTI_Trigger_Rising_Falling = 0x10
+}EXTITrigger_TypeDef;
+
+
+
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t EXTI_Line;               
+ 
+   
+  EXTIMode_TypeDef EXTI_Mode;       
+ 
+
+  EXTITrigger_TypeDef EXTI_Trigger; 
+ 
+
+  FunctionalState EXTI_LineCmd;     
+  
+}EXTI_InitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 132 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_exti.h"
+
+
+
+
+                                                                                                  
+
+
+#line 151 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_exti.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+ 
+void EXTI_DeInit(void);
+
+ 
+void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct);
+void EXTI_StructInit(EXTI_InitTypeDef* EXTI_InitStruct);
+void EXTI_GenerateSWInterrupt(uint32_t EXTI_Line);
+
+ 
+FlagStatus EXTI_GetFlagStatus(uint32_t EXTI_Line);
+void EXTI_ClearFlag(uint32_t EXTI_Line);
+ITStatus EXTI_GetITStatus(uint32_t EXTI_Line);
+void EXTI_ClearITPendingBit(uint32_t EXTI_Line);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 35 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+  
+typedef enum
+{ 
+  FLASH_BUSY = 1,
+  FLASH_ERROR_WRP,
+  FLASH_ERROR_PROGRAM,
+  FLASH_COMPLETE,
+  FLASH_TIMEOUT
+}FLASH_Status;
+
+ 
+  
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+ 
+   
+
+
+
+
+
+  
+
+
+
+ 
+  
+
+
+
+
+
+  
+
+
+
+ 
+  
+
+#line 133 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+  
+
+
+  
+ 
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 208 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+
+#line 215 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+
+
+
+ 
+  
+
+
+  
+
+#line 232 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_flash.h"
+ 
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+ 
+ 
+  
+
+
+   
+   
+void FLASH_SetLatency(uint32_t FLASH_Latency);
+void FLASH_PrefetchBufferCmd(FunctionalState NewState);
+void FLASH_ReadAccess64Cmd(FunctionalState NewState);
+void FLASH_SLEEPPowerDownCmd(FunctionalState NewState);
+
+    
+void FLASH_Unlock(void);
+void FLASH_Lock(void);
+FLASH_Status FLASH_ErasePage(uint32_t Page_Address);
+FLASH_Status FLASH_FastProgramWord(uint32_t Address, uint32_t Data);
+
+   
+void DATA_EEPROM_Unlock(void);
+void DATA_EEPROM_Lock(void);
+void DATA_EEPROM_FixedTimeProgramCmd(FunctionalState NewState);
+FLASH_Status DATA_EEPROM_EraseWord(uint32_t Address);
+FLASH_Status DATA_EEPROM_FastProgramByte(uint32_t Address, uint8_t Data);
+FLASH_Status DATA_EEPROM_FastProgramHalfWord(uint32_t Address, uint16_t Data);
+FLASH_Status DATA_EEPROM_FastProgramWord(uint32_t Address, uint32_t Data);
+FLASH_Status DATA_EEPROM_ProgramByte(uint32_t Address, uint8_t Data);
+FLASH_Status DATA_EEPROM_ProgramHalfWord(uint32_t Address, uint16_t Data);
+FLASH_Status DATA_EEPROM_ProgramWord(uint32_t Address, uint32_t Data);
+
+ 
+void FLASH_OB_Unlock(void);
+void FLASH_OB_Lock(void);
+void FLASH_OB_Launch(void);
+FLASH_Status FLASH_OB_WRPConfig(uint32_t OB_WRP, FunctionalState NewState);
+FLASH_Status FLASH_OB_RDPConfig(uint8_t OB_RDP);
+FLASH_Status FLASH_OB_UserConfig(uint8_t OB_IWDG, uint8_t OB_STOP, uint8_t OB_STDBY);
+FLASH_Status FLASH_OB_BORConfig(uint8_t OB_BOR);
+uint8_t FLASH_OB_GetUser(void);
+uint32_t FLASH_OB_GetWRP(void);
+FlagStatus FLASH_OB_GetRDP(void);
+uint8_t FLASH_OB_GetBOR(void);
+
+   
+void FLASH_ITConfig(uint32_t FLASH_IT, FunctionalState NewState);
+FlagStatus FLASH_GetFlagStatus(uint32_t FLASH_FLAG);
+void FLASH_ClearFlag(uint32_t FLASH_FLAG);
+FLASH_Status FLASH_GetStatus(void);
+FLASH_Status FLASH_WaitForLastOperation(uint32_t Timeout);
+
+
+
+
+
+  
+FLASH_Status FLASH_RUNPowerDownCmd(FunctionalState NewState);
+FLASH_Status FLASH_ProgramHalfPage(uint32_t Address, uint32_t* pBuffer);
+FLASH_Status DATA_EEPROM_EraseDoubleWord(uint32_t Address);
+FLASH_Status DATA_EEPROM_ProgramDoubleWord(uint32_t Address, uint64_t Data);
+  
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+ 
+#line 36 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+#line 50 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+
+  
+typedef enum
+{ 
+  GPIO_Mode_IN   = 0x00,  
+  GPIO_Mode_OUT  = 0x01,  
+  GPIO_Mode_AF   = 0x02,  
+  GPIO_Mode_AN   = 0x03   
+}GPIOMode_TypeDef;
+
+
+
+
+ 
+
+
+
+  
+typedef enum
+{ GPIO_OType_PP = 0x00,
+  GPIO_OType_OD = 0x01
+}GPIOOType_TypeDef;
+
+
+
+
+ 
+
+
+
+  
+typedef enum
+{ 
+  GPIO_Speed_400KHz = 0x00,  
+  GPIO_Speed_2MHz   = 0x01,  
+  GPIO_Speed_10MHz  = 0x02,  
+  GPIO_Speed_40MHz  = 0x03   
+}GPIOSpeed_TypeDef;
+
+
+
+
+ 
+
+
+
+  
+typedef enum
+{ GPIO_PuPd_NOPULL = 0x00,
+  GPIO_PuPd_UP     = 0x01,
+  GPIO_PuPd_DOWN   = 0x02
+}GPIOPuPd_TypeDef;
+
+
+
+
+ 
+
+
+
+ 
+typedef enum
+{ Bit_RESET = 0,
+  Bit_SET
+}BitAction;
+
+
+
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t GPIO_Pin;              
+ 
+
+  GPIOMode_TypeDef GPIO_Mode;     
+ 
+
+  GPIOSpeed_TypeDef GPIO_Speed;   
+ 
+
+  GPIOOType_TypeDef GPIO_OType;   
+ 
+
+  GPIOPuPd_TypeDef GPIO_PuPd;     
+ 
+}GPIO_InitTypeDef;
+
+ 
+
+
+
+ 
+  
+
+
+ 
+#line 170 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+#line 188 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+ 
+
+
+
+  
+#line 211 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+#line 228 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+ 
+
+
+
+ 
+
+
+
+  
+#line 245 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+#line 307 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_gpio.h"
+
+
+
+ 
+
+
+
+ 
+    
+
+
+
+
+ 
+
+
+
+   
+  
+ 
+ 
+
+ 
+void GPIO_DeInit(GPIO_TypeDef* GPIOx);
+
+ 
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct);
+void GPIO_StructInit(GPIO_InitTypeDef* GPIO_InitStruct);
+void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+
+ 
+uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+uint16_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx);
+uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+uint16_t GPIO_ReadOutputData(GPIO_TypeDef* GPIOx);
+void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);
+void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
+
+ 
+void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_PinSource, uint8_t GPIO_AF);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 37 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+
+ 
+
+
+
+  
+  
+ 
+ 
+
+
+
+  
+  
+
+
+  
+#line 58 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+                                      
+#line 65 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+ 
+
+
+
+  
+#line 104 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+ 
+
+
+
+  
+
+
+
+   
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+                                                             
+#line 193 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+#line 210 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+
+  
+
+
+
+  
+  
+ 
+#line 246 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+   
+#line 260 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+#line 298 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+#line 342 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_syscfg.h"
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void SYSCFG_DeInit(void);
+void SYSCFG_RIDeInit(void);
+
+  
+void SYSCFG_MemoryRemapConfig(uint8_t SYSCFG_MemoryRemap);
+void SYSCFG_USBPuCmd(FunctionalState NewState);
+void SYSCFG_EXTILineConfig(uint8_t EXTI_PortSourceGPIOx, uint8_t EXTI_PinSourcex);
+
+  
+void SYSCFG_RITIMSelect(uint32_t TIM_Select);
+void SYSCFG_RITIMInputCaptureConfig(uint32_t RI_InputCapture, uint32_t RI_InputCaptureRouting);
+void SYSCFG_RIResistorConfig(uint32_t RI_Resistor, FunctionalState NewState);
+void SYSCFG_RISwitchControlModeCmd(FunctionalState NewState);
+void SYSCFG_RIIOSwitchConfig(uint32_t RI_IOSwitch, FunctionalState NewState);
+void SYSCFG_RIHysteresisConfig(uint8_t RI_Port, uint16_t RI_Pin,
+                               FunctionalState NewState);
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 38 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t I2C_ClockSpeed;          
+ 
+
+  uint16_t I2C_Mode;                
+ 
+
+  uint16_t I2C_DutyCycle;           
+ 
+
+  uint16_t I2C_OwnAddress1;         
+ 
+
+  uint16_t I2C_Ack;                 
+ 
+
+  uint16_t I2C_AcknowledgedAddress; 
+ 
+}I2C_InitTypeDef;
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+#line 88 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 162 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 220 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+
+#line 230 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 249 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+
+ 
+
+#line 268 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+
+#line 282 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+ 
+
+
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+    
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+ 
+
+ 
+
+
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+ 
+
+#line 488 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_i2c.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void I2C_DeInit(I2C_TypeDef* I2Cx);
+
+ 
+void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
+void I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct);
+void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GenerateSTART(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GenerateSTOP(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_AcknowledgeConfig(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_OwnAddress2Config(I2C_TypeDef* I2Cx, uint8_t Address);
+void I2C_DualAddressCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_GeneralCallCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_SoftwareResetCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_SMBusAlertConfig(I2C_TypeDef* I2Cx, uint16_t I2C_SMBusAlert);
+void I2C_ARPCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_StretchClockCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
+void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction);
+
+  
+void I2C_SendData(I2C_TypeDef* I2Cx, uint8_t Data);
+uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx);
+
+  
+void I2C_TransmitPEC(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_PECPositionConfig(I2C_TypeDef* I2Cx, uint16_t I2C_PECPosition);
+void I2C_CalculatePEC(I2C_TypeDef* I2Cx, FunctionalState NewState);
+uint8_t I2C_GetPEC(I2C_TypeDef* I2Cx);
+
+ 
+void I2C_DMACmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_DMALastTransferCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+
+
+ 
+uint16_t I2C_ReadRegister(I2C_TypeDef* I2Cx, uint8_t I2C_Register);
+void I2C_ITConfig(I2C_TypeDef* I2Cx, uint16_t I2C_IT, FunctionalState NewState);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+ErrorStatus I2C_CheckEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT);
+
+
+
+
+ 
+uint32_t I2C_GetLastEvent(I2C_TypeDef* I2Cx);
+
+
+
+
+ 
+FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
+
+
+void I2C_ClearFlag(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
+ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
+void I2C_ClearITPendingBit(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 39 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_iwdg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_iwdg.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 79 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_iwdg.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess);
+void IWDG_SetPrescaler(uint8_t IWDG_Prescaler);
+void IWDG_SetReload(uint16_t Reload);
+void IWDG_ReloadCounter(void);
+
+ 
+void IWDG_Enable(void);
+
+ 
+FlagStatus IWDG_GetFlagStatus(uint16_t IWDG_FLAG);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 40 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+ 
+
+typedef struct
+{
+  uint32_t LCD_Prescaler;     
+ 
+  uint32_t LCD_Divider;       
+ 
+  uint32_t LCD_Duty;          
+ 
+  uint32_t LCD_Bias;          
+  
+  uint32_t LCD_VoltageSource; 
+ 
+}LCD_InitTypeDef;
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+#line 89 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 106 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+ 
+  
+
+
+ 
+
+#line 131 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 148 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+ 
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+ 
+  
+
+
+
+
+
+                           
+
+
+   
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+#line 230 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 239 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+ 
+
+
+
+
+ 
+
+#line 256 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 265 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+ 
+
+#line 299 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 308 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+ 
+
+
+
+ 
+
+#line 324 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 333 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+ 
+      
+
+
+ 
+
+#line 347 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+
+
+
+
+
+    
+
+
+
+ 
+
+#line 377 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+#line 394 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_lcd.h"
+
+
+
+   
+   
+
+
+ 
+
+ 
+ 
+
+ 
+void LCD_DeInit(void);
+
+ 
+void LCD_Init(LCD_InitTypeDef* LCD_InitStruct);
+void LCD_StructInit(LCD_InitTypeDef* LCD_InitStruct);
+void LCD_Cmd(FunctionalState NewState);
+void LCD_WaitForSynchro(void);
+void LCD_HighDriveCmd(FunctionalState NewState);
+void LCD_MuxSegmentCmd(FunctionalState NewState);
+void LCD_PulseOnDurationConfig(uint32_t LCD_PulseOnDuration);
+void LCD_DeadTimeConfig(uint32_t LCD_DeadTime);
+void LCD_BlinkConfig(uint32_t LCD_BlinkMode, uint32_t LCD_BlinkFrequency);
+void LCD_ContrastConfig(uint32_t LCD_Contrast);
+
+ 
+void LCD_Write(uint32_t LCD_RAMRegister, uint32_t LCD_Data);
+void LCD_UpdateDisplayRequest(void);
+
+ 
+void LCD_ITConfig(uint32_t LCD_IT, FunctionalState NewState);
+FlagStatus LCD_GetFlagStatus(uint32_t LCD_FLAG);
+void LCD_ClearFlag(uint32_t LCD_FLAG);
+ITStatus LCD_GetITStatus(uint32_t LCD_IT);
+void LCD_ClearITPendingBit(uint32_t LCD_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 41 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_pwr.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_pwr.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+
+  
+
+
+
+  
+
+#line 66 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_pwr.h"
+
+
+ 
+
+
+
+ 
+
+#line 80 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_pwr.h"
+
+
+ 
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+     
+  
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+  
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+#line 146 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_pwr.h"
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+  
+void PWR_DeInit(void);
+
+  
+void PWR_RTCAccessCmd(FunctionalState NewState);
+
+  
+void PWR_PVDLevelConfig(uint32_t PWR_PVDLevel);
+void PWR_PVDCmd(FunctionalState NewState);
+
+  
+void PWR_WakeUpPinCmd(uint32_t PWR_WakeUpPin, FunctionalState NewState);
+
+  
+void PWR_FastWakeUpCmd(FunctionalState NewState);
+void PWR_UltraLowPowerCmd(FunctionalState NewState);
+
+  
+void PWR_VoltageScalingConfig(uint32_t PWR_VoltageScaling);
+
+  
+void PWR_EnterLowPowerRunMode(FunctionalState NewState);
+void PWR_EnterSleepMode(uint32_t PWR_Regulator, uint8_t PWR_SLEEPEntry);
+void PWR_EnterSTOPMode(uint32_t PWR_Regulator, uint8_t PWR_STOPEntry);
+void PWR_EnterSTANDBYMode(void);
+
+  
+FlagStatus PWR_GetFlagStatus(uint32_t PWR_FLAG);
+void PWR_ClearFlag(uint32_t PWR_FLAG);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 42 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+typedef struct
+{
+  uint32_t SYSCLK_Frequency;
+  uint32_t HCLK_Frequency;
+  uint32_t PCLK1_Frequency;
+  uint32_t PCLK2_Frequency;
+}RCC_ClocksTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 83 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+#line 91 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+  
+  
+
+
+ 
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 122 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+#line 160 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+ 
+
+
+
+ 
+
+#line 182 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+  
+
+
+
+ 
+
+#line 198 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+ 
+  
+
+
+
+ 
+
+#line 214 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 257 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+ 
+
+
+
+ 
+
+#line 275 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 294 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+  
+
+
+
+ 
+
+#line 320 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+ 
+
+
+
+ 
+
+#line 338 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+ 
+
+#line 381 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+#line 389 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rcc.h"
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+ 
+void RCC_DeInit(void);
+
+ 
+void RCC_HSEConfig(uint8_t RCC_HSE);
+ErrorStatus RCC_WaitForHSEStartUp(void);
+void RCC_MSIRangeConfig(uint32_t RCC_MSIRange);
+void RCC_AdjustMSICalibrationValue(uint8_t MSICalibrationValue);
+void RCC_MSICmd(FunctionalState NewState);
+void RCC_AdjustHSICalibrationValue(uint8_t HSICalibrationValue);
+void RCC_HSICmd(FunctionalState NewState);
+void RCC_LSEConfig(uint8_t RCC_LSE);
+void RCC_LSICmd(FunctionalState NewState);
+void RCC_PLLConfig(uint8_t RCC_PLLSource, uint8_t RCC_PLLMul, uint8_t RCC_PLLDiv);
+void RCC_PLLCmd(FunctionalState NewState);
+void RCC_ClockSecuritySystemCmd(FunctionalState NewState);
+void RCC_MCOConfig(uint8_t RCC_MCOSource, uint8_t RCC_MCODiv);
+
+ 
+void RCC_SYSCLKConfig(uint32_t RCC_SYSCLKSource);
+uint8_t RCC_GetSYSCLKSource(void);
+void RCC_HCLKConfig(uint32_t RCC_SYSCLK);
+void RCC_PCLK1Config(uint32_t RCC_HCLK);
+void RCC_PCLK2Config(uint32_t RCC_HCLK);
+void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks);
+
+ 
+void RCC_RTCCLKConfig(uint32_t RCC_RTCCLKSource);
+void RCC_RTCCLKCmd(FunctionalState NewState);
+void RCC_RTCResetCmd(FunctionalState NewState);
+
+void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
+void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+
+void RCC_AHBPeriphResetCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
+void RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+void RCC_APB1PeriphResetCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+
+void RCC_AHBPeriphClockLPModeCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
+void RCC_APB2PeriphClockLPModeCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
+void RCC_APB1PeriphClockLPModeCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
+
+ 
+void RCC_ITConfig(uint8_t RCC_IT, FunctionalState NewState);
+FlagStatus RCC_GetFlagStatus(uint8_t RCC_FLAG);
+void RCC_ClearFlag(void);
+ITStatus RCC_GetITStatus(uint8_t RCC_IT);
+void RCC_ClearITPendingBit(uint8_t RCC_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+ 
+#line 43 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+  
+typedef struct
+{
+  uint32_t RTC_HourFormat;   
+ 
+  
+  uint32_t RTC_AsynchPrediv; 
+ 
+  
+  uint32_t RTC_SynchPrediv;  
+  
+}RTC_InitTypeDef;
+
+
+
+ 
+typedef struct
+{
+  uint8_t RTC_Hours;    
+
+
+ 
+
+  uint8_t RTC_Minutes;  
+ 
+  
+  uint8_t RTC_Seconds;  
+ 
+
+  uint8_t RTC_H12;      
+ 
+}RTC_TimeTypeDef; 
+
+
+
+ 
+typedef struct
+{
+  uint32_t RTC_WeekDay; 
+ 
+  
+  uint32_t RTC_Month;   
+ 
+
+  uint8_t RTC_Date;     
+ 
+  
+  uint8_t RTC_Year;     
+ 
+}RTC_DateTypeDef;
+
+
+
+ 
+typedef struct
+{
+  RTC_TimeTypeDef RTC_AlarmTime;      
+
+  uint32_t RTC_AlarmMask;            
+ 
+
+  uint32_t RTC_AlarmDateWeekDaySel;  
+ 
+  
+  uint8_t RTC_AlarmDateWeekDay;      
+
+
+
+ 
+}RTC_AlarmTypeDef;
+
+ 
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+#line 203 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+  
+
+
+
+  
+  
+#line 226 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+  
+
+
+
+
+  
+#line 242 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+#line 272 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+#line 305 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+    
+                               
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+                                                                      
+
+#line 457 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+  
+#line 494 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+  
+
+
+
+  
+#line 508 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_rtc.h"
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+ 
+  
+
+  
+ErrorStatus RTC_DeInit(void);
+
+
+  
+ErrorStatus RTC_Init(RTC_InitTypeDef* RTC_InitStruct);
+void RTC_StructInit(RTC_InitTypeDef* RTC_InitStruct);
+void RTC_WriteProtectionCmd(FunctionalState NewState);
+ErrorStatus RTC_EnterInitMode(void);
+void RTC_ExitInitMode(void);
+ErrorStatus RTC_WaitForSynchro(void);
+ErrorStatus RTC_RefClockCmd(FunctionalState NewState);
+
+  
+ErrorStatus RTC_SetTime(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct);
+void RTC_TimeStructInit(RTC_TimeTypeDef* RTC_TimeStruct);
+void RTC_GetTime(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_TimeStruct);
+ErrorStatus RTC_SetDate(uint32_t RTC_Format, RTC_DateTypeDef* RTC_DateStruct);
+void RTC_DateStructInit(RTC_DateTypeDef* RTC_DateStruct);
+void RTC_GetDate(uint32_t RTC_Format, RTC_DateTypeDef* RTC_DateStruct);
+
+  
+void RTC_SetAlarm(uint32_t RTC_Format, uint32_t RTC_Alarm, RTC_AlarmTypeDef* RTC_AlarmStruct);
+void RTC_AlarmStructInit(RTC_AlarmTypeDef* RTC_AlarmStruct);
+void RTC_GetAlarm(uint32_t RTC_Format, uint32_t RTC_Alarm, RTC_AlarmTypeDef* RTC_AlarmStruct);
+ErrorStatus RTC_AlarmCmd(uint32_t RTC_Alarm, FunctionalState NewState);
+
+  
+void RTC_WakeUpClockConfig(uint32_t RTC_WakeUpClock);
+void RTC_SetWakeUpCounter(uint32_t RTC_WakeUpCounter);
+uint32_t RTC_GetWakeUpCounter(void);
+ErrorStatus RTC_WakeUpCmd(FunctionalState NewState);
+
+  
+void RTC_DayLightSavingConfig(uint32_t RTC_DayLightSaving, uint32_t RTC_StoreOperation);
+uint32_t RTC_GetStoreOperation(void);
+
+  
+void RTC_OutputConfig(uint32_t RTC_Output, uint32_t RTC_OutputPolarity);
+
+  
+ErrorStatus RTC_DigitalCalibConfig(uint32_t RTC_CalibSign, uint32_t Value);
+ErrorStatus RTC_DigitalCalibCmd(FunctionalState NewState);
+void RTC_CalibOutputCmd(FunctionalState NewState);
+
+  
+void RTC_TimeStampCmd(uint32_t RTC_TimeStampEdge, FunctionalState NewState);
+void RTC_GetTimeStamp(uint32_t RTC_Format, RTC_TimeTypeDef* RTC_StampTimeStruct, 
+                                      RTC_DateTypeDef* RTC_StampDateStruct);
+                                  
+
+  
+void RTC_TamperTriggerConfig(uint32_t RTC_Tamper, uint32_t RTC_TamperTrigger);
+void RTC_TamperCmd(uint32_t RTC_Tamper, FunctionalState NewState);
+
+  
+void RTC_WriteBackupRegister(uint32_t RTC_BKP_DR, uint32_t Data);
+uint32_t RTC_ReadBackupRegister(uint32_t RTC_BKP_DR);
+
+  
+void RTC_OutputTypeConfig(uint32_t RTC_OutputType);
+
+
+  
+void RTC_ITConfig(uint32_t RTC_IT, FunctionalState NewState);
+FlagStatus RTC_GetFlagStatus(uint32_t RTC_FLAG);
+void RTC_ClearFlag(uint32_t RTC_FLAG);
+ITStatus RTC_GetITStatus(uint32_t RTC_IT);
+void RTC_ClearITPendingBit(uint32_t RTC_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 44 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t SPI_Direction;           
+ 
+
+  uint16_t SPI_Mode;                
+ 
+
+  uint16_t SPI_DataSize;            
+ 
+
+  uint16_t SPI_CPOL;                
+ 
+
+  uint16_t SPI_CPHA;                
+ 
+
+  uint16_t SPI_NSS;                 
+
+ 
+ 
+  uint16_t SPI_BaudRatePrescaler;   
+
+
+
+ 
+
+  uint16_t SPI_FirstBit;            
+ 
+
+  uint16_t SPI_CRCPolynomial;        
+}SPI_InitTypeDef;
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+  
+#line 102 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 186 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 258 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 286 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+#line 322 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_spi.h"
+
+
+ 
+  
+
+
+ 
+
+ 
+ 
+
+  
+void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
+
+ 
+void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStruct);
+void SPI_StructInit(SPI_InitTypeDef* SPI_InitStruct);
+void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_DataSizeConfig(SPI_TypeDef* SPIx, uint16_t SPI_DataSize);
+void SPI_BiDirectionalLineConfig(SPI_TypeDef* SPIx, uint16_t SPI_Direction);
+void SPI_NSSInternalSoftwareConfig(SPI_TypeDef* SPIx, uint16_t SPI_NSSInternalSoft);
+void SPI_SSOutputCmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+
+  
+void SPI_I2S_SendData(SPI_TypeDef* SPIx, uint16_t Data);
+uint16_t SPI_I2S_ReceiveData(SPI_TypeDef* SPIx);
+
+ 
+void SPI_CalculateCRC(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_TransmitCRC(SPI_TypeDef* SPIx);
+uint16_t SPI_GetCRC(SPI_TypeDef* SPIx, uint8_t SPI_CRC);
+uint16_t SPI_GetCRCPolynomial(SPI_TypeDef* SPIx);
+
+ 
+void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, uint16_t SPI_I2S_DMAReq, FunctionalState NewState);
+
+ 
+void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT, FunctionalState NewState);
+FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
+void SPI_I2S_ClearFlag(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
+ITStatus SPI_I2S_GetITStatus(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
+void SPI_I2S_ClearITPendingBit(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 45 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t TIM_Prescaler;         
+ 
+
+  uint16_t TIM_CounterMode;       
+ 
+
+  uint16_t TIM_Period;            
+
+  
+
+  uint16_t TIM_ClockDivision;     
+ 
+
+} TIM_TimeBaseInitTypeDef;       
+
+
+
+ 
+
+typedef struct
+{
+  uint16_t TIM_OCMode;        
+ 
+
+  uint16_t TIM_OutputState;   
+ 
+
+  uint16_t TIM_Pulse;         
+ 
+
+  uint16_t TIM_OCPolarity;    
+ 
+
+} TIM_OCInitTypeDef;
+
+
+
+ 
+
+typedef struct
+{
+
+  uint16_t TIM_Channel;      
+ 
+
+  uint16_t TIM_ICPolarity;   
+ 
+
+  uint16_t TIM_ICSelection;  
+ 
+
+  uint16_t TIM_ICPrescaler;  
+ 
+
+  uint16_t TIM_ICFilter;     
+ 
+} TIM_ICInitTypeDef;
+
+ 
+
+  
+
+
+ 
+
+#line 124 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+ 
+#line 132 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+#line 151 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+#line 190 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+                                 
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 237 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+ 
+
+
+
+ 
+
+#line 255 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 307 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 323 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 339 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 354 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+#line 361 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 404 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 448 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 463 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+
+  
+
+
+
+ 
+
+#line 480 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 508 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 569 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+
+ 
+
+#line 585 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+   
+
+
+  
+
+
+
+ 
+
+#line 600 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+                                     
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 661 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+#line 677 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+  
+  
+
+
+ 
+
+#line 718 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+
+  
+
+
+
+ 
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 778 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_tim.h"
+
+
+
+ 
+
+
+
+ 
+  
+ 
+  
+
+ 
+void TIM_DeInit(TIM_TypeDef* TIMx);
+void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
+void TIM_TimeBaseStructInit(TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
+void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);
+void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);
+void TIM_SetCounter(TIM_TypeDef* TIMx, uint32_t Counter);
+void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint32_t Autoreload);
+uint32_t TIM_GetCounter(TIM_TypeDef* TIMx);
+uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx);
+void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_UpdateRequestConfig(TIM_TypeDef* TIMx, uint16_t TIM_UpdateSource);
+void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_SelectOnePulseMode(TIM_TypeDef* TIMx, uint16_t TIM_OPMode);
+void TIM_SetClockDivision(TIM_TypeDef* TIMx, uint16_t TIM_CKD);
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_OC1Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC2Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC3Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OC4Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_OCStructInit(TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_SelectOCxM(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_OCMode);
+void TIM_SetCompare1(TIM_TypeDef* TIMx, uint32_t Compare1);
+void TIM_SetCompare2(TIM_TypeDef* TIMx, uint32_t Compare2);
+void TIM_SetCompare3(TIM_TypeDef* TIMx, uint32_t Compare3);
+void TIM_SetCompare4(TIM_TypeDef* TIMx, uint32_t Compare4);
+void TIM_ForcedOC1Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC2Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC3Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_ForcedOC4Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
+void TIM_OC1PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC2PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC3PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC4PreloadConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPreload);
+void TIM_OC1FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC2FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC3FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_OC4FastConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCFast);
+void TIM_ClearOC1Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC2Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC3Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_ClearOC4Ref(TIM_TypeDef* TIMx, uint16_t TIM_OCClear);
+void TIM_OC1PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC2PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC3PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_OC4PolarityConfig(TIM_TypeDef* TIMx, uint16_t TIM_OCPolarity);
+void TIM_SelectOCREFClear(TIM_TypeDef* TIMx, uint16_t TIM_OCReferenceClear);
+void TIM_CCxCmd(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_CCx);
+
+ 
+void TIM_ICInit(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_ICStructInit(TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_PWMIConfig(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
+uint32_t TIM_GetCapture1(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture2(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture3(TIM_TypeDef* TIMx);
+uint32_t TIM_GetCapture4(TIM_TypeDef* TIMx);
+void TIM_SetIC1Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC2Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC3Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC4Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+
+ 
+void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState);
+void TIM_GenerateEvent(TIM_TypeDef* TIMx, uint16_t TIM_EventSource);
+FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+void TIM_ClearFlag(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_DMAConfig(TIM_TypeDef* TIMx, uint16_t TIM_DMABase, uint16_t TIM_DMABurstLength);
+void TIM_DMACmd(TIM_TypeDef* TIMx, uint16_t TIM_DMASource, FunctionalState NewState);
+void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_InternalClockConfig(TIM_TypeDef* TIMx);
+void TIM_ITRxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+void TIM_TIxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_TIxExternalCLKSource,
+                                uint16_t TIM_ICPolarity, uint16_t ICFilter);
+void TIM_ETRClockMode1Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
+                             uint16_t ExtTRGFilter);
+void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, 
+                             uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter);
+
+
+ 
+void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+void TIM_SelectOutputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_TRGOSource);
+void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode);
+void TIM_SelectMasterSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_MasterSlaveMode);
+void TIM_ETRConfig(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
+                   uint16_t ExtTRGFilter);
+
+                    
+void TIM_EncoderInterfaceConfig(TIM_TypeDef* TIMx, uint16_t TIM_EncoderMode,
+                                uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);
+void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+ 
+void TIM_RemapConfig(TIM_TypeDef* TIMx, uint16_t TIM_Remap);
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+ 
+#line 46 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+
+ 
+
+
+
+  
+
+  
+
+
+
+  
+  
+typedef struct
+{
+  uint32_t USART_BaudRate;            
+
+
+ 
+
+  uint16_t USART_WordLength;          
+ 
+
+  uint16_t USART_StopBits;            
+ 
+
+  uint16_t USART_Parity;              
+
+
+
+
+ 
+ 
+  uint16_t USART_Mode;                
+ 
+
+  uint16_t USART_HardwareFlowControl; 
+
+ 
+} USART_InitTypeDef;
+
+
+
+  
+  
+typedef struct
+{
+
+  uint16_t USART_Clock;   
+ 
+
+  uint16_t USART_CPOL;    
+ 
+
+  uint16_t USART_CPHA;    
+ 
+
+  uint16_t USART_LastBit; 
+
+ 
+} USART_ClockInitTypeDef;
+
+ 
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+
+
+                                    
+
+
+
+
+  
+
+
+
+  
+  
+#line 132 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+  
+
+
+
+  
+  
+#line 146 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+  
+#line 173 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+ 
+  
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+  
+#line 250 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+  
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+ 
+
+#line 322 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_usart.h"
+                              
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+  
+
+  
+void USART_DeInit(USART_TypeDef* USARTx);
+
+ 
+void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
+void USART_StructInit(USART_InitTypeDef* USART_InitStruct);
+void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler);
+void USART_OverSampling8Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_OneBitMethodCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+  
+void USART_SendData(USART_TypeDef* USARTx, uint16_t Data);
+uint16_t USART_ReceiveData(USART_TypeDef* USARTx);
+
+ 
+void USART_SetAddress(USART_TypeDef* USARTx, uint8_t USART_Address);
+void USART_WakeUpConfig(USART_TypeDef* USARTx, uint16_t USART_WakeUp);
+void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_LINBreakDetectLengthConfig(USART_TypeDef* USARTx, uint16_t USART_LINBreakDetectLength);
+void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SendBreak(USART_TypeDef* USARTx);
+
+ 
+void USART_HalfDuplexCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_SmartCardCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SmartCardNACKCmd(USART_TypeDef* USARTx, FunctionalState NewState);
+void USART_SetGuardTime(USART_TypeDef* USARTx, uint8_t USART_GuardTime);
+
+ 
+void USART_IrDAConfig(USART_TypeDef* USARTx, uint16_t USART_IrDAMode);
+void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
+
+ 
+void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState);
+
+ 
+void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);
+FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, uint16_t USART_IT);
+void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 47 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_wwdg.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_wwdg.h"
+
+
+
+ 
+
+
+
+  
+
+ 
+ 
+
+
+
+  
+  
+
+
+  
+  
+#line 63 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_wwdg.h"
+
+
+
+  
+
+
+
+  
+
+ 
+ 
+   
+void WWDG_DeInit(void);
+
+ 
+void WWDG_SetPrescaler(uint32_t WWDG_Prescaler);
+void WWDG_SetWindowValue(uint8_t WindowValue);
+void WWDG_EnableIT(void);
+void WWDG_SetCounter(uint8_t Counter);
+
+ 
+void WWDG_Enable(uint8_t Counter);
+
+ 
+FlagStatus WWDG_GetFlagStatus(void);
+void WWDG_ClearFlag(void);
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+ 
+#line 48 ".\\stm32l1xx_conf.h"
+#line 1 "..\\STM32L1xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint8_t NVIC_IRQChannel;                    
+
+
+ 
+
+  uint8_t NVIC_IRQChannelPreemptionPriority;  
+
+ 
+
+  uint8_t NVIC_IRQChannelSubPriority;         
+
+ 
+
+  FunctionalState NVIC_IRQChannelCmd;         
+
+    
+} NVIC_InitTypeDef;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 122 "..\\STM32L1xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+ 
+
+
+
+ 
+
+#line 140 "..\\STM32L1xx_StdPeriph_Driver\\inc\\misc.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+  
+
+void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup);
+void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct);
+void NVIC_SetVectorTable(uint32_t NVIC_VectTab, uint32_t Offset);
+void NVIC_SystemLPConfig(uint8_t LowPowerMode, FunctionalState NewState);
+void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 49 ".\\stm32l1xx_conf.h"
+
+ 
+ 
+
+ 
+ 
+
+ 
+#line 72 ".\\stm32l1xx_conf.h"
+
+
+
+ 
+#line 6102 "..\\..\\..\\..\\INC\\ST\\STM32L1xx\\stm32l1xx.h"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+ 
+
+ 
+#line 33 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+typedef struct
+{
+  uint32_t DMA_PeripheralBaseAddr;  
+
+  uint32_t DMA_MemoryBaseAddr;      
+
+  uint32_t DMA_DIR;                
+ 
+
+  uint32_t DMA_BufferSize;         
+
+ 
+
+  uint32_t DMA_PeripheralInc;      
+ 
+
+  uint32_t DMA_MemoryInc;          
+ 
+
+  uint32_t DMA_PeripheralDataSize; 
+ 
+
+  uint32_t DMA_MemoryDataSize;     
+ 
+
+  uint32_t DMA_Mode;               
+
+
+ 
+
+  uint32_t DMA_Priority;           
+ 
+
+  uint32_t DMA_M2M;                
+ 
+}DMA_InitTypeDef;
+
+ 
+
+
+
+ 
+
+#line 98 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 145 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+ 
+
+
+
+ 
+
+#line 159 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+#line 186 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+#line 239 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+#line 256 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+ 
+
+
+
+ 
+#line 292 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+
+#line 309 "..\\STM32L1xx_StdPeriph_Driver\\inc\\stm32l1xx_dma.h"
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+ 
+
+  
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx);
+
+ 
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct);
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct);
+void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState);
+
+ 
+void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber);
+uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx);
+
+ 
+void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState);
+FlagStatus DMA_GetFlagStatus(uint32_t DMA_FLAG);
+void DMA_ClearFlag(uint32_t DMA_FLAG);
+ITStatus DMA_GetITStatus(uint32_t DMA_IT);
+void DMA_ClearITPendingBit(uint32_t DMA_IT);
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+#line 77 "..\\STM32L1xx_StdPeriph_Driver\\src\\stm32l1xx_dma.c"
+#line 78 "..\\STM32L1xx_StdPeriph_Driver\\src\\stm32l1xx_dma.c"
+
+
+
+ 
+
+
+
+
+  
+
+ 
+ 
+
+ 
+#line 99 "..\\STM32L1xx_StdPeriph_Driver\\src\\stm32l1xx_dma.c"
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+ 
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx)
+{
+   
+  ((void)0);
+
+   
+  DMAy_Channelx->CCR &= (uint16_t)(~((uint16_t)0x0001));
+
+   
+  DMAy_Channelx->CCR  = 0;
+  
+   
+  DMAy_Channelx->CNDTR = 0;
+  
+   
+  DMAy_Channelx->CPAR  = 0;
+  
+   
+  DMAy_Channelx->CMAR = 0;
+  
+  if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00000001) | ((uint32_t)0x00000002) | ((uint32_t)0x00000004) | ((uint32_t)0x00000008)));
+  }
+  else if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x001C)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00000010) | ((uint32_t)0x00000020) | ((uint32_t)0x00000040) | ((uint32_t)0x00000080)));
+  }
+  else if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0030)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00000100) | ((uint32_t)0x00000200) | ((uint32_t)0x00000400) | ((uint32_t)0x00000800)));
+  }
+  else if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0044)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00001000) | ((uint32_t)0x00002000) | ((uint32_t)0x00004000) | ((uint32_t)0x00008000)));
+  }
+  else if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0058)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00010000) | ((uint32_t)0x00020000) | ((uint32_t)0x00040000) | ((uint32_t)0x00080000)));
+  }
+  else if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x006C)))
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x00100000) | ((uint32_t)0x00200000) | ((uint32_t)0x00400000) | ((uint32_t)0x00800000)));
+  }
+  else
+  {
+    if (DMAy_Channelx == ((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0080)))
+    {
+       
+      ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR |= ((uint32_t)(((uint32_t)0x01000000) | ((uint32_t)0x02000000) | ((uint32_t)0x04000000) | ((uint32_t)0x08000000)));    
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+ 
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct)
+{
+  uint32_t tmpreg = 0;
+
+   
+  ((void)0);
+  ((void)0);
+  ((void)0);
+  ((void)0);
+  ((void)0);   
+  ((void)0);
+  ((void)0);
+  ((void)0);
+  ((void)0);
+  ((void)0);
+
+ 
+   
+  tmpreg = DMAy_Channelx->CCR;
+   
+  tmpreg &= ((uint32_t)0xFFFF800F);
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+
+   
+  DMAy_Channelx->CCR = tmpreg;
+
+ 
+   
+  DMAy_Channelx->CNDTR = DMA_InitStruct->DMA_BufferSize;
+
+ 
+   
+  DMAy_Channelx->CPAR = DMA_InitStruct->DMA_PeripheralBaseAddr;
+
+ 
+   
+  DMAy_Channelx->CMAR = DMA_InitStruct->DMA_MemoryBaseAddr;
+}
+
+
+
+
+
+
+ 
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct)
+{
+ 
+   
+  DMA_InitStruct->DMA_PeripheralBaseAddr = 0;
+   
+  DMA_InitStruct->DMA_MemoryBaseAddr = 0;
+   
+  DMA_InitStruct->DMA_DIR = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_BufferSize = 0;
+   
+  DMA_InitStruct->DMA_PeripheralInc = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_MemoryInc = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_PeripheralDataSize = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_MemoryDataSize = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_Mode = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_Priority = ((uint32_t)0x00000000);
+   
+  DMA_InitStruct->DMA_M2M = ((uint32_t)0x00000000);
+}
+
+
+
+
+
+
+
+
+ 
+void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState)
+{
+   
+  ((void)0);
+  ((void)0);
+
+  if (NewState != DISABLE)
+  {
+     
+    DMAy_Channelx->CCR |= ((uint16_t)0x0001);
+  }
+  else
+  {
+     
+    DMAy_Channelx->CCR &= (uint16_t)(~((uint16_t)0x0001));
+  }
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber)
+{
+   
+  ((void)0);
+  
+ 
+   
+  DMAy_Channelx->CNDTR = DataNumber;  
+}
+
+
+
+
+
+
+
+
+ 
+uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx)
+{
+   
+  ((void)0);
+   
+  return ((uint16_t)(DMAy_Channelx->CNDTR));
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState)
+{
+   
+  ((void)0);
+  ((void)0);
+  ((void)0);
+
+  if (NewState != DISABLE)
+  {
+     
+    DMAy_Channelx->CCR |= DMA_IT;
+  }
+  else
+  {
+     
+    DMAy_Channelx->CCR &= ~DMA_IT;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+FlagStatus DMA_GetFlagStatus(uint32_t DMA_FLAG)
+{
+  FlagStatus bitstatus = RESET;
+  uint32_t tmpreg = 0;
+
+   
+  ((void)0);
+
+   
+  if ((DMA_FLAG & ((uint32_t)0x10000000)) == (uint32_t)RESET)
+  {
+     
+    tmpreg = ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->ISR ;
+  }
+
+   
+  if ((tmpreg & DMA_FLAG) != (uint32_t)RESET)
+  {
+     
+    bitstatus = SET;
+  }
+  else
+  {
+     
+    bitstatus = RESET;
+  }
+  
+   
+  return  bitstatus;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void DMA_ClearFlag(uint32_t DMA_FLAG)
+{
+   
+  ((void)0);
+
+  if ((DMA_FLAG & ((uint32_t)0x10000000)) == (uint32_t)RESET)
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR = DMA_FLAG;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ITStatus DMA_GetITStatus(uint32_t DMA_IT)
+{
+  ITStatus bitstatus = RESET;
+  uint32_t tmpreg = 0;
+ 
+   
+  ((void)0);
+
+   
+  if ((DMA_IT & ((uint32_t)0x10000000)) == (uint32_t)RESET)
+  {
+     
+    tmpreg = ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->ISR ;
+  }
+
+   
+  if ((tmpreg & DMA_IT) != (uint32_t)RESET)
+  {
+     
+    bitstatus = SET;
+  }
+  else
+  {
+     
+    bitstatus = RESET;
+  }
+   
+  return  bitstatus;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+void DMA_ClearITPendingBit(uint32_t DMA_IT)
+{
+   
+  ((void)0);
+
+   
+  if ((DMA_IT & ((uint32_t)0x10000000)) == (uint32_t)RESET)
+  {
+     
+    ((DMA_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x6000))->IFCR = DMA_IT;
+  }
+}
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+ 
