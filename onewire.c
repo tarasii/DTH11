@@ -46,14 +46,11 @@ uint8_t OW_toByte(uint8_t *ow_bits) {
 
 
 uint8_t OW_Reset() {
-	uint8_t ow_presence, i;
+	uint8_t ow_presence;
 	USART_InitTypeDef USART_InitStructure;
-		
 
-	//USART_InitStructure.USART_BaudRate = 115200;
 	//USART_InitStructure.USART_BaudRate = 9600;
-	//USART_InitStructure.USART_BaudRate = 14400;
-	USART_InitStructure.USART_BaudRate = 150;
+	USART_InitStructure.USART_BaudRate = 300;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
 	USART_InitStructure.USART_Parity = USART_Parity_No;
@@ -62,44 +59,26 @@ uint8_t OW_Reset() {
 	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
 	USART_Init(OW_USART, &USART_InitStructure);
 
- 	//for (i=0;i<80;i++){
- 	//	USART_SendData(OW_USART, 0);
- 	//}
-	//GPIO_HIGH(GPIOA,GPIO_Pin_3);
-	//Delay(10);
-	//GPIO_LOW(GPIOA,GPIO_Pin_3);
-	//Delay(20);
-	USART_SendData(OW_USART, 0x00);
-
-	USART_InitStructure.USART_BaudRate = 14400;
-	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-	USART_InitStructure.USART_StopBits = USART_StopBits_1;
-	USART_InitStructure.USART_Parity = USART_Parity_No;
-	USART_InitStructure.USART_HardwareFlowControl =
-			USART_HardwareFlowControl_None;
-	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-	USART_Init(OW_USART, &USART_InitStructure);
-	
 	// отправл€ем 0xf0 на скорости 9600
 	USART_ClearFlag(OW_USART, USART_FLAG_TC);
-	USART_SendData(OW_USART, 0x0f);
+	USART_SendData(OW_USART, 0xf0);
 	while (USART_GetFlagStatus(OW_USART, USART_FLAG_TC) == RESET) {
 		}
 
 	ow_presence = USART_ReceiveData(OW_USART);
 
-// 	USART_InitStructure.USART_BaudRate = 115200;
-// 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-// 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
-// 	USART_InitStructure.USART_Parity = USART_Parity_No;
-// 	USART_InitStructure.USART_HardwareFlowControl =
-// 			USART_HardwareFlowControl_None;
-// 	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-// 	USART_Init(OW_USART, &USART_InitStructure);
+	//USART_InitStructure.USART_BaudRate = 115200;
+	USART_InitStructure.USART_BaudRate = 9600;
+	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+	USART_InitStructure.USART_Parity = USART_Parity_No;
+	USART_InitStructure.USART_HardwareFlowControl =
+			USART_HardwareFlowControl_None;
+	USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+	USART_Init(OW_USART, &USART_InitStructure);
 
-	if (ow_presence != 0x0f) {
-		//return OW_OK;
-		return ow_presence;
+	if (ow_presence != 0xf0) {
+		return OW_OK;
 	}
 
 	return OW_NO_DEVICE;
@@ -146,8 +125,8 @@ void OW_SendBits(uint8_t num_bits) {
 	DMA_Cmd(OW_DMA_CH_TX, ENABLE);
 
 	// ∆дем, пока не примем 8 байт
-	while (DMA_GetFlagStatus(OW_DMA_FLAG) == RESET) {
-	}
+	//while (DMA_GetFlagStatus(OW_DMA_FLAG) == RESET) {
+	//}
 
 	// отключаем DMA
 	DMA_Cmd(OW_DMA_CH_TX, DISABLE);
@@ -170,39 +149,34 @@ void OW_SendBits(uint8_t num_bits) {
 uint8_t OW_Send(uint8_t sendReset, uint8_t *command, uint8_t cLen,
 		uint8_t *data, uint8_t dLen, uint8_t readStart) {
 
-	uint8_t i;
-			
+
 	// если требуетс€ сброс - сбрасываем и провер€ем на наличие устройств
 	if (sendReset == OW_SEND_RESET) {
 		if (OW_Reset() == OW_NO_DEVICE) {
 			return OW_NO_DEVICE;
 		}
 	}
-	
-	for (i=0;i<dLen;i++){
-			data[i] = USART_ReceiveData(OW_USART);
+
+	while (cLen > 0) {
+
+		OW_toBits(*command, ow_buf);
+		command++;
+		cLen--;
+
+
+		OW_SendBits(8);
+
+		// если прочитанные данные кому-то нужны - выкинем их в буфер
+		if (readStart == 0 && dLen > 0) {
+			*data = OW_toByte(ow_buf);
+			data++;
+			dLen--;
+		} else {
+			if (readStart != OW_NO_READ) {
+				readStart--;
+			}
+		}
 	}
-
-// 	while (cLen > 0) {
-
-// 		OW_toBits(*command, ow_buf);
-// 		command++;
-// 		cLen--;
-
-
-// 		OW_SendBits(8);
-
-// 		// если прочитанные данные кому-то нужны - выкинем их в буфер
-// 		if (readStart == 0 && dLen > 0) {
-// 			*data = OW_toByte(ow_buf);
-// 			data++;
-// 			dLen--;
-// 		} else {
-// 			if (readStart != OW_NO_READ) {
-// 				readStart--;
-// 			}
-// 		}
-// 	}
 
 	return OW_OK;
 }

@@ -109,17 +109,19 @@ int main(void){
     }
 
  
-		acquireTemperatureData();
+		//acquireTemperatureData();
 
- 		while (!flag_ADCDMA_TransferComplete);
- 				
- 		processTempData();
+ 		//while (!flag_ADCDMA_TransferComplete);
+ 				 
+ 		//processTempData();
 
- 		RTC_GetTime(RTC_Format_BIN, &RTCTimeStr);
- 		RTC_GetDate(RTC_Format_BIN, &RTCDateStr);
+ 		//RTC_GetTime(RTC_Format_BIN, &RTCTimeStr);
+ 		//RTC_GetDate(RTC_Format_BIN, &RTCDateStr);
 		
+		//res = OW_Send(OW_SEND_RESET, "\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff", 10, buf, 5, 5);
 		res = OW_Send(OW_SEND_RESET, "\xff", 1, buf, 5, 0);
 
+		//res = OW_Send(OW_SEND_RESET, "\xff", 1, NULL, 0, OW_NO_READ);
 
 		
 		switch (mode){
@@ -134,16 +136,16 @@ int main(void){
 					
 				}
 				
- 				sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
- 				GotoXY(0,0);
- 				Write_LCD((unsigned char *) strDisp);
+ 				//sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
+ 				//GotoXY(0,0);
+ 				//Write_LCD((unsigned char *) strDisp);
 
 				//sprintf(strDisp, "t(core)=%d°C", temperature_C);
 				sprintf(strDisp, "%d %02x%02x%02x%02x%02x", res, buf[0],buf[1],buf[2],buf[3],buf[4]);
  				GotoXY(0,1);
  				Write_LCD((unsigned char *) strDisp);
 
-				Delay(500);
+				//Delay(500);
 				break;
 			case 1:
 				if (first_time_in_mode==1) {
@@ -152,6 +154,7 @@ int main(void){
 					first_time_in_mode = 0;
 					
 					GPIO_TOGGLE(LD_PORT,LD_GREEN);
+					GPIO_LOW(GPIOA,GPIO_Pin_2);
 				}
 					
  				sprintf(strDisp, "Page 1");
@@ -168,6 +171,7 @@ int main(void){
 					
 					GPIO_TOGGLE(LD_PORT,LD_GREEN);
 					GPIO_TOGGLE(LD_PORT,LD_BLUE);
+					GPIO_HIGH(GPIOA,GPIO_Pin_2);
 					
 				}
 					
@@ -478,18 +482,25 @@ void Init_GPIOs (void){
 //   GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_TIM2);
 	
 /* USART input-output temperature */	
+
+	//GPIO_Init(GPIOA, &GPIO_InitStructure);
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+  //GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  //GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
+  //GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+  GPIO_Init(GPIOA, &GPIO_InitStructure);
 		
   GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
 
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
-
+	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  //GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  //GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 		
   GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);

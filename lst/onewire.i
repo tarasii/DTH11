@@ -13333,14 +13333,11 @@ uint8_t OW_toByte(uint8_t *ow_bits) {
 
 
 uint8_t OW_Reset() {
-	uint8_t ow_presence, i;
+	uint8_t ow_presence;
 	USART_InitTypeDef USART_InitStructure;
-		
 
 	
-	
-	
-	USART_InitStructure.USART_BaudRate = 150;
+	USART_InitStructure.USART_BaudRate = 300;
 	USART_InitStructure.USART_WordLength = ((uint16_t)0x0000);
 	USART_InitStructure.USART_StopBits = ((uint16_t)0x0000);
 	USART_InitStructure.USART_Parity = ((uint16_t)0x0000);
@@ -13349,44 +13346,26 @@ uint8_t OW_Reset() {
 	USART_InitStructure.USART_Mode = ((uint16_t)0x0008) | ((uint16_t)0x0004);
 	USART_Init(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), &USART_InitStructure);
 
- 	
- 	
- 	
-	
-	
-	
-	
-	USART_SendData(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), 0x00);
-
-	USART_InitStructure.USART_BaudRate = 14400;
-	USART_InitStructure.USART_WordLength = ((uint16_t)0x0000);
-	USART_InitStructure.USART_StopBits = ((uint16_t)0x0000);
-	USART_InitStructure.USART_Parity = ((uint16_t)0x0000);
-	USART_InitStructure.USART_HardwareFlowControl =
-			((uint16_t)0x0000);
-	USART_InitStructure.USART_Mode = ((uint16_t)0x0008) | ((uint16_t)0x0004);
-	USART_Init(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), &USART_InitStructure);
-	
 	
 	USART_ClearFlag(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), ((uint16_t)0x0040));
-	USART_SendData(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), 0x0f);
+	USART_SendData(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), 0xf0);
 	while (USART_GetFlagStatus(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), ((uint16_t)0x0040)) == RESET) {
 		}
 
 	ow_presence = USART_ReceiveData(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)));
 
+	
+	USART_InitStructure.USART_BaudRate = 9600;
+	USART_InitStructure.USART_WordLength = ((uint16_t)0x0000);
+	USART_InitStructure.USART_StopBits = ((uint16_t)0x0000);
+	USART_InitStructure.USART_Parity = ((uint16_t)0x0000);
+	USART_InitStructure.USART_HardwareFlowControl =
+			((uint16_t)0x0000);
+	USART_InitStructure.USART_Mode = ((uint16_t)0x0008) | ((uint16_t)0x0004);
+	USART_Init(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)), &USART_InitStructure);
 
-
-
-
-
-
-
-
-
-	if (ow_presence != 0x0f) {
-		
-		return ow_presence;
+	if (ow_presence != 0xf0) {
+		return 1;
 	}
 
 	return 3;
@@ -13433,8 +13412,8 @@ void OW_SendBits(uint8_t num_bits) {
 	DMA_Cmd(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0080)), ENABLE);
 
 	
-	while (DMA_GetFlagStatus(((uint32_t)0x00200000)) == RESET) {
-	}
+	
+	
 
 	
 	DMA_Cmd(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0080)), DISABLE);
@@ -13457,39 +13436,34 @@ void OW_SendBits(uint8_t num_bits) {
 uint8_t OW_Send(uint8_t sendReset, uint8_t *command, uint8_t cLen,
 		uint8_t *data, uint8_t dLen, uint8_t readStart) {
 
-	uint8_t i;
-			
+
 	
 	if (sendReset == 1) {
 		if (OW_Reset() == 3) {
 			return 3;
 		}
 	}
-	
-	for (i=0;i<dLen;i++){
-			data[i] = USART_ReceiveData(((USART_TypeDef *) (((uint32_t)0x40000000) + 0x4400)));
+
+	while (cLen > 0) {
+
+		OW_toBits(*command, ow_buf);
+		command++;
+		cLen--;
+
+
+		OW_SendBits(8);
+
+		
+		if (readStart == 0 && dLen > 0) {
+			*data = OW_toByte(ow_buf);
+			data++;
+			dLen--;
+		} else {
+			if (readStart != 0xff) {
+				readStart--;
+			}
+		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	return 1;
 }

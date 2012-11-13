@@ -13531,17 +13531,19 @@ int main(void){
     }
 
  
-		acquireTemperatureData();
+		
 
- 		while (!flag_ADCDMA_TransferComplete);
- 				
- 		processTempData();
+ 		
+ 				 
+ 		
 
- 		RTC_GetTime(((uint32_t)0x000000000), &RTCTimeStr);
- 		RTC_GetDate(((uint32_t)0x000000000), &RTCDateStr);
+ 		
+ 		
+		
 		
 		res = OW_Send(1, "\xff", 1, buf, 5, 0);
 
+		
 
 		
 		switch (mode){
@@ -13556,16 +13558,16 @@ int main(void){
 					
 				}
 				
- 				sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
- 				GotoXY(0,0);
- 				Write_LCD((unsigned char *) strDisp);
+ 				
+ 				
+ 				
 
 				
 				sprintf(strDisp, "%d %02x%02x%02x%02x%02x", res, buf[0],buf[1],buf[2],buf[3],buf[4]);
  				GotoXY(0,1);
  				Write_LCD((unsigned char *) strDisp);
 
-				Delay(500);
+				
 				break;
 			case 1:
 				if (first_time_in_mode==1) {
@@ -13574,6 +13576,7 @@ int main(void){
 					first_time_in_mode = 0;
 					
 					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0080);
+					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRH = ((uint16_t)0x0004);
 				}
 					
  				sprintf(strDisp, "Page 1");
@@ -13590,6 +13593,7 @@ int main(void){
 					
 					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0080);
 					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0040);
+					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
 					
 				}
 					
@@ -13900,18 +13904,25 @@ void Init_GPIOs (void){
 
 	
  	
+
+	
 	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0004);
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-
-	GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+  
+  
+  
+  GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
 		
   GPIO_PinAFConfig(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), ((uint8_t)0x02), ((uint8_t)0x07));
 
 	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0008);
-
+	
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  
+  
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
 	GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
 		
   GPIO_PinAFConfig(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), ((uint8_t)0x03), ((uint8_t)0x07));
