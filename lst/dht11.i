@@ -1,5 +1,5 @@
-#line 1 "main.c"
-#line 1 "main.h"
+#line 1 "dht11.c"
+#line 1 "dht11.h"
  
 
 
@@ -13263,67 +13263,6 @@ extern __declspec(__nothrow) void __use_no_semihosting(void);
  
 void Delay(uint32_t nTime);
 
-#line 7 "main.h"
-#line 1 "ext_lcd.h"
-
-
-
-#line 5 "ext_lcd.h"
-
-
-
-
-
-
-
- 
-#line 22 "ext_lcd.h"
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void Write_LCD( unsigned char* message );
-void Init_Ext_LCD(void);
-void Clr_LCD(void);
-void GotoHome(void);
-void GotoXY(uint8_t pos, uint8_t line);
-
-void LCD_CURS(uint8_t enable, uint8_t curs, uint8_t blink);
-void LCD_ON(uint8_t curs, uint8_t blink);
-void LCD_OFF(void);
-
-
-
-#line 8 "main.h"
-#line 1 "dht11.h"
- 
-
-
-
- 
 #line 7 "dht11.h"
 
  
@@ -13337,743 +13276,75 @@ void LCD_OFF(void);
  
 uint8_t read_DHT11(uint8_t *buf);
 
-#line 9 "main.h"
+#line 2 "dht11.c"
 
-
-
-
-
-
-#line 21 "main.h"
-
-
-
-
-
-
-
- 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
- 
-typedef struct
-{
-    uint16_t myVREF;
-    uint16_t TS_CAL_COLD;
-    uint16_t reserved;
-    uint16_t TS_CAL_HOT;
-} CALIB_TypeDef;
-
- 
- 
- 
-
-void TimingDelay_Decrement(void);
-void Init_ext_LCD_GPIOs (void);
-void Init_GPIOs (void);
-void RCC_Configuration(void);
-uint16_t uint16_time_diff(uint16_t now, uint16_t before);
-void configureADC_Temp(void);
-void DAC_Config(void);
-void configureDMA(void);
-void processTempData(void);
-void acquireTemperatureData(void);
-void setADCDMA_TransferComplete(void);
-void clearADCDMA_TransferComplete(void);
-
-
-#line 2 "main.c"
-
-static volatile uint32_t TimingDelay;
-RCC_ClocksTypeDef RCC_Clocks;
-
-
-ADC_InitTypeDef ADC_InitStructure;
-ADC_CommonInitTypeDef ADC_CommonInitStructure;
-
-
-DMA_InitTypeDef DMA_InitStructure;
-
-
-CALIB_TypeDef calibdata;     
-volatile _Bool flag_ADCDMA_TransferComplete;
-uint16_t ADC_ConvertedValueBuff[20];
-
-uint32_t refAVG, tempAVG, preasureAVG;
-int32_t temperature_C;
-float voltage_V, preasure_V; 
-
-volatile uint16_t systick_ms = 0;
-
-float humidity, capacitance;
-
-float temperature;
-uint16_t temperature_data;
-uint8_t idbuf[2][8];
-uint8_t num_ow;
-
-volatile uint16_t dirty_cycle = 0, period = 0; 
-
-volatile uint8_t mode = 0, first_time_in_mode = 1, flag_UserButton = 0;
-
-void SysTick_Handler(void) {
-    TimingDelay_Decrement();
+uint16_t read_cycle(uint16_t cur_tics, uint8_t neg_tic){
+	uint16_t cnt_tics;
+ 	if (cur_tics < 10000) cnt_tics = 0;
+	if (neg_tic){
+		while (!GPIO_ReadInputDataBit(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)),((uint16_t)0x0008))&&(cnt_tics<10000)){
+			cnt_tics++;
+		}
+	}
+	else {
+		while (GPIO_ReadInputDataBit(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)),((uint16_t)0x0008))&&(cnt_tics<10000)){
+			cnt_tics++;
+		}
+	}
+ 	return cnt_tics;
 }
 
-void EXTI0_IRQHandler(void)
-{
-   
-	flag_UserButton = 1;
-  EXTI_ClearITPendingBit(((uint32_t)0x00000001));
-}
-
-void TIM2_IRQHandler(void)
-{
+uint8_t read_DHT11(uint8_t *buf){
+	uint16_t dt[42];
+	uint16_t cnt;
+	uint8_t i, check_sum, tmp; 
+	
+	
+	Delay(400);
+ 	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRH = ((uint16_t)0x0004);
+	Delay(18);
+ 	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
+	
   
-  
-     
-    TIM_ClearITPendingBit(((TIM_TypeDef *) (((uint32_t)0x40000000) + 0x0000)), ((uint16_t)0x0004));
-
-	  period = TIM_GetCapture1(((TIM_TypeDef *) (((uint32_t)0x40000000) + 0x0000)));
-    dirty_cycle = TIM_GetCapture2(((TIM_TypeDef *) (((uint32_t)0x40000000) + 0x0000)));
-	
-}
-
-void DMA1_Channel1_IRQHandler(void)
-{
-  DMA_ClearFlag(((uint32_t)0x00000002));
-  setADCDMA_TransferComplete();   
-}
-
-
-int main(void){
-	uint8_t buf[5], res;
-	
-	
-	char strDisp[25];
-	
-	
-	
-	
-	RTC_DateTypeDef RTCDateStr;
-	RTC_TimeTypeDef RTCTimeStr;
-	
-	
-	
-	RCC_Configuration();
-	
-	Init_GPIOs();
-	
-	Init_ext_LCD_GPIOs();
-		
-	configureDMA();
-	
-	configureADC_Temp();	
-	
-	
-	Init_Ext_LCD();
-	
-	
-	Write_LCD("HUMIDITY SENSOR");
-			
-	
-	while(1){
-	
-    if (flag_UserButton == 1){
-			if(++mode == 3){mode = 0;}
-      flag_UserButton = 0;
-			first_time_in_mode = 1;
-    }
-
- 
-		
-
- 		
- 				 
- 		
-
- 		RTC_GetTime(((uint32_t)0x000000000), &RTCTimeStr);
- 		RTC_GetDate(((uint32_t)0x000000000), &RTCDateStr);
-		
-		res = read_DHT11(buf);
-		
-		
-		switch (mode){
-			case 0:				
-				if (first_time_in_mode==1) {
-					
-					Clr_LCD();
-					first_time_in_mode = 0;
-					
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->BSRRH = ((uint16_t)0x0080);
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->BSRRH = ((uint16_t)0x0040);
-					
-				}
-				
- 				sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
- 				GotoXY(0,0);
- 				Write_LCD((unsigned char *) strDisp);
-				
-				if (res==0) sprintf(strDisp, "RH=%02d%% t=%dC           ", buf[0], buf[2]);
-				if (res==2) sprintf(strDisp,"CHECKSUM ERROR");
-				if (res==1) sprintf(strDisp,"NO CONNECTED");
- 				GotoXY(0,1);
- 				Write_LCD((unsigned char *) strDisp);
-
-				
-				break;
-			case 1:
-				if (first_time_in_mode==1) {
-					
-					Clr_LCD();
-					first_time_in_mode = 0;
-					
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0080);
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRH = ((uint16_t)0x0004);
-				}
-					
- 				sprintf(strDisp, "Page 1");
- 				GotoXY(0,0);
- 				Write_LCD((unsigned char *) strDisp);
-										
-				break;
-			case 2:
-				if (first_time_in_mode==1) {
-					
-					Clr_LCD();
-					
-					first_time_in_mode = 0;
-					
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0080);
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->ODR ^= ((uint16_t)0x0040);
-					((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
-					
-				}
-					
- 				sprintf(strDisp, "Page 2");
- 				GotoXY(0,0);
-				Write_LCD((unsigned char *) strDisp);
-				break;
-		}			
-
+ 	cnt = 0; 
+	for(i=0;i<83 && cnt<10000;i++){
+		if (i & 1){
+			cnt = read_cycle(cnt, 1);
+		}
+		else {
+			cnt = read_cycle(cnt, 0);
+			dt[i/2]= cnt;
+		}
 	}
 	
-}
-
-void acquireTemperatureData(void)
-{
-  
-  
-  
-
-   
-  
-  
-   
-  
-
-   
-  
-
-   
-  DMA_DeInit(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)));
-  DMA_Init(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)), &DMA_InitStructure);
-  DMA_Cmd(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)), ENABLE);
-  
-   
-  DMA_ITConfig(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)), ((uint32_t)0x00000002), ENABLE);
-
-    
-  ADC_DMACmd(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), DISABLE);
-
-      
-  ADC_DMACmd(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ENABLE);
-  
-   
-  clearADCDMA_TransferComplete(); 
-  
-   
-  ADC_SoftwareStartConv(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)));
-}
-
-void insertionSort(uint16_t *numbers, uint32_t array_size) 
-{
-  
-	uint32_t i, j;
-	uint32_t index;
-
-  for (i=1; i < array_size; i++) {
-    index = numbers[i];
-    j = i;
-    while ((j > 0) && (numbers[j-1] > index)) {
-      numbers[j] = numbers[j-1];
-      j = j - 1;
-    }
-    numbers[j] = index;
-  }
-}
-
-uint32_t interquartileMean(uint16_t *array, uint32_t numOfSamples)
-{
-    uint32_t sum=0;
-    uint32_t  index, maxindex;
-      
-	maxindex = 3 * numOfSamples / 4;
-    for (index = (numOfSamples / 4); index < maxindex; index++){
-            sum += array[index];
-    }
-	 
-    return ( sum / (numOfSamples / 2) );
-}
-
-void processTempData(void)
-{
-  uint32_t index, dataSum;
-
-   
-  insertionSort(ADC_ConvertedValueBuff, 12);
-  
-   
-  
-	tempAVG = ADC_ConvertedValueBuff[0];
-
-  
-  
-  
-  
-  
-  
-  
-  dataSum = 0;
-    
-  for (index=12; index < 20-4; index++){
-    dataSum += ADC_ConvertedValueBuff[index];
-  }
-   
-  preasureAVG = dataSum / 4 ;
-
-  dataSum = 0;
-    
-  for (index=12+4; index < 20; index++){
-    dataSum += ADC_ConvertedValueBuff[index];
-  }
-   
-  refAVG = dataSum / 4 ;
-
-
-   
-  temperature_C = tempAVG - (int32_t) calibdata.TS_CAL_COLD;	
-  temperature_C = temperature_C * (int32_t)(110 - 25);                      
-  temperature_C = temperature_C / 
-                  (int32_t)(calibdata.TS_CAL_HOT - calibdata.TS_CAL_COLD); 
-  temperature_C = temperature_C + 25; 
-	
-   
-  voltage_V = (1.224L/refAVG) * 4096;
-
-	
-}
-
-
-void Init_ext_LCD_GPIOs (void){
-  GPIO_InitTypeDef GPIO_InitStructure;
-         
- 
-   
-  GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0020) | ((uint16_t)0x0010);  
-
-
-  
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
-  GPIO_Init( ((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400)), &GPIO_InitStructure);
-    
- 
-   
-  GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0001) | ((uint16_t)0x0002) | ((uint16_t)0x0004) | ((uint16_t)0x0008) ;                               
-  
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
-  GPIO_Init( ((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0800)), &GPIO_InitStructure);  
-	
-} 
-
-void RCC_Configuration(void){
-
-  
-  RCC_GetClocksFreq(&RCC_Clocks);
-  SysTick_Config(RCC_Clocks.HCLK_Frequency / 2000);
-
-   
-  RCC_AHBPeriphClockCmd(((uint32_t)0x00000001) | ((uint32_t)0x00000002) | ((uint32_t)0x00000004)| ((uint32_t)0x00000008)| ((uint32_t)0x00000010)| ((uint32_t)0x00000020), ENABLE);     
-	RCC_AHBPeriphClockCmd(((uint32_t)0x01000000), ENABLE);
-	
-	RCC_APB1PeriphClockCmd(((uint32_t)0x00000001) | ((uint32_t)0x00020000) | ((uint32_t)0x20000000), ENABLE);	
-	
-	
-  RCC_APB2PeriphClockCmd(((uint32_t)0x00000200) | ((uint32_t)0x00000001), ENABLE);
-
-	 
-  PWR_RTCAccessCmd(ENABLE);
-
-
-
-
-
-   
-  RCC_LSEConfig(((uint8_t)0x01)); 
-
-   
-	while (RCC_GetFlagStatus(((uint8_t)0x49)) == RESET)
-	{}
-  
-  RCC_RTCCLKCmd(ENABLE);
-   
-   
-  RCC_RTCCLKConfig(((uint32_t)0x00010000)); 
-}  
-
-
-void Init_GPIOs (void){
-  GPIO_InitTypeDef GPIO_InitStructure;
-
-  
-
-  EXTI_InitTypeDef EXTI_InitStructure;
-  NVIC_InitTypeDef NVIC_InitStructure;
-
-   
-  GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0001);
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
-
-   
-  SYSCFG_EXTILineConfig(((uint8_t)0x00),((uint8_t)0x00));
-
-   
-  EXTI_InitStructure.EXTI_Line = ((uint32_t)0x00000001) ;  
-  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;  
-  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-  EXTI_Init(&EXTI_InitStructure);
-
-   
-  NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn ;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-
-  NVIC_Init(&NVIC_InitStructure); 
-
- 
-  GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0080)|((uint16_t)0x0040);
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
-  GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400)), &GPIO_InitStructure);
-  ((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->BSRRH = ((uint16_t)0x0080);	
-  ((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0400))->BSRRH = ((uint16_t)0x0040);
-  
- 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-	
  	
-
-	
-	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0004);
-	
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
-  
-  
-  
-  GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
 	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
-		
-
-
-	GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0008);
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  
-  
-  
-	GPIO_Init(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
-		
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  GPIO_InitStructure.GPIO_Pin = ((uint16_t)0x0010)  ;                               
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
-  GPIO_Init( ((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000)), &GPIO_InitStructure);
-
-
-
-
-
-   
-
-
-
-
-} 
-
-FunctionalState  testUserCalibData(void)
-{
-  int32_t testdiff;
-  FunctionalState retval = DISABLE;
-  
-  testdiff = ((CALIB_TypeDef *) ((uint32_t)0x08080000))->TS_CAL_HOT - ((CALIB_TypeDef *) ((uint32_t)0x08080000))->TS_CAL_COLD;
-  
-  if ( testdiff > (int32_t) 50 )    retval = ENABLE;
-  
-  return retval;
-}
-
-FunctionalState  testFactoryCalibData(void)
-{
-  int32_t testdiff;
-  FunctionalState retval = DISABLE;
-  
-  testdiff = ((CALIB_TypeDef *) ((uint32_t)0x1FF80078))->TS_CAL_HOT - ((CALIB_TypeDef *) ((uint32_t)0x1FF80078))->TS_CAL_COLD;
-  
-  if ( testdiff > (int32_t) 50 )    retval = ENABLE;
-  
-  return retval;
-}
-
-void  writeCalibData(CALIB_TypeDef* calibStruct)
-{
-	volatile FLASH_Status FLASHStatus = FLASH_COMPLETE; 
-
-  uint32_t  Address = 0;
-  uint32_t  dataToWrite;
-  
-   
-  DATA_EEPROM_Unlock();
-  
-         
-  FLASH_ClearFlag(((uint32_t)0x00000002)|((uint32_t)0x00000100) | ((uint32_t)0x00000200)
-                  | ((uint32_t)0x00000400) | ((uint32_t)0x00000800));	
-  
-  
-   
- 
-  Address = (uint32_t) ((CALIB_TypeDef *) ((uint32_t)0x08080000));
-
-
-  dataToWrite = 0x00;
-  dataToWrite = (uint32_t)(calibStruct->TS_CAL_COLD) << 16;
-  
-  FLASHStatus = DATA_EEPROM_ProgramWord(Address, dataToWrite);
-
-  if(FLASHStatus != FLASH_COMPLETE)
-  {
-    while(1);  
-  }
-
-  Address += 4;
-
-  dataToWrite = 0x00;
-  dataToWrite = (uint32_t)(calibStruct->TS_CAL_HOT) << 16;
-  
-  FLASHStatus = DATA_EEPROM_ProgramWord(Address, dataToWrite);
-  
-}
-
-void configureADC_Temp(void)
-{
-  uint32_t ch_index;
-	volatile uint16_t 	T_StartupTimeDelay;
-
-   
-  if ( testUserCalibData() == ENABLE ) calibdata = *((CALIB_TypeDef *) ((uint32_t)0x08080000));
-  else if ( testFactoryCalibData() == ENABLE ) calibdata = *((CALIB_TypeDef *) ((uint32_t)0x1FF80078));
-  else {
-    calibdata.TS_CAL_COLD = 0x2A8;
-    calibdata.TS_CAL_HOT = 0x362;
-    writeCalibData(&calibdata);
-    calibdata = *((CALIB_TypeDef *) ((uint32_t)0x08080000));
-  }
-
-   
-  
-  
-   
-  ADC_TempSensorVrefintCmd(ENABLE); 
-  
-   
-  T_StartupTimeDelay = 1024;
-  while (T_StartupTimeDelay--);
-
-   
-  ADC_CommonInitStructure.ADC_Prescaler = ((uint32_t)0x00020000);
-  ADC_CommonInit(&ADC_CommonInitStructure);
-  
-  
-   
-  ADC_StructInit(&ADC_InitStructure);
-  ADC_InitStructure.ADC_Resolution = ((uint32_t)0x00000000);	          
-  ADC_InitStructure.ADC_ScanConvMode = ENABLE;	                          
-  ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;			  
-  ADC_InitStructure.ADC_ExternalTrigConv = ((uint32_t)0x00000000); 
-  ADC_InitStructure.ADC_DataAlign = ((uint32_t)0x00000000);                  
-  ADC_InitStructure.ADC_NbrOfConversion = 20;             
-  
-  ADC_Init(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), &ADC_InitStructure);
-
-    
-
-    for (ch_index = 1; ch_index <= 12; ch_index++){
-      ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x10), ch_index, 
-                               ((uint8_t)0x07));
-    }
-
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x0D), 13, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x0D), 14, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x0D), 15, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x0D), 16, ((uint8_t)0x07));
-
-	ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x11), 17, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x11), 18, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x11), 19, ((uint8_t)0x07));
-  ADC_RegularChannelConfig(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint8_t)0x11), 20, ((uint8_t)0x07));
-
-   
-  ADC_Cmd(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ENABLE);
-
-   
-  while(ADC_GetFlagStatus(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400)), ((uint16_t)0x0040)) == RESET); 
-		
-}
-
-void configureDMA(void)
-{
-   
-  NVIC_InitTypeDef NVIC_InitStructure;
-  
-   
-  
-
-   
-  DMA_DeInit(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)));
-  
-  
 	
-	 
-  DMA_StructInit(&DMA_InitStructure);
-  DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)&(((ADC_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x2400))->DR);	     
-  DMA_InitStructure.DMA_MemoryBaseAddr = (uint32_t)&ADC_ConvertedValueBuff;  
-  DMA_InitStructure.DMA_DIR = ((uint32_t)0x00000000);                         
-  DMA_InitStructure.DMA_BufferSize = 20;                     
-  DMA_InitStructure.DMA_PeripheralInc = ((uint32_t)0x00000000);	     
-  DMA_InitStructure.DMA_MemoryInc = ((uint32_t)0x00000080);                    
-  DMA_InitStructure.DMA_PeripheralDataSize = ((uint32_t)0x00000100);
-  DMA_InitStructure.DMA_MemoryDataSize = ((uint32_t)0x00000400);	     
-  DMA_InitStructure.DMA_Mode = ((uint32_t)0x00000000);                              
-  DMA_InitStructure.DMA_Priority = ((uint32_t)0x00002000);	                     
-  DMA_InitStructure.DMA_M2M = ((uint32_t)0x00000000);                               
-  DMA_Init(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)), &DMA_InitStructure);								 
-
-    
-  DMA_ITConfig(((DMA_Channel_TypeDef *) (((((uint32_t)0x40000000) + 0x20000) + 0x6000) + 0x0008)), ((uint32_t)0x00000002), ENABLE);
-  
-   
-  NVIC_InitStructure.NVIC_IRQChannel =   DMA1_Channel1_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);
-  
+	if (cnt>=10000) return 1;
+	
+	
+ 	for(i=2;i<42;i++){
+		tmp <<= 1;
+  	if (dt[i]>20) {
+			tmp++;			
+ 		}
+		if (!((i-1)%8) && (i>2)) {
+			*buf = tmp;
+			buf++;
+		}
+ 	}
+	
+	
+	buf -= 5;
+	check_sum = 0;
+ 	for(i=0;i<4;i++){
+		check_sum += *buf;
+		buf++;
+	}
+	
+	if (*buf != check_sum) return 2;
+				
+	return 0;	
+	
 }
-
-uint16_t uint16_time_diff(uint16_t now, uint16_t before)
-{
-  return (now >= before) ? (now - before) : (65535 - before + now);
-}
-
-void Delay(uint32_t nTime){
-  TimingDelay = nTime;
-
-  while(TimingDelay != 0);
-  
-}
-
-void TimingDelay_Decrement(void){
-
-  if (TimingDelay != 0x00)
-  { 
-    TimingDelay--;
-  }	
-	++systick_ms;
-}
-
-void setADCDMA_TransferComplete(void)
-{
-  flag_ADCDMA_TransferComplete = !0;
-}
-
-void clearADCDMA_TransferComplete(void)
-{
-  flag_ADCDMA_TransferComplete = 0;
-}
-
 

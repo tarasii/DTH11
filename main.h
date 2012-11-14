@@ -5,21 +5,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "utils.h"
 #include "ext_lcd.h"
+#include "dht11.h"
 
-#define MAX_TICS 10000
-
-//HCH1000+555
-#define capasitive_coefficient  6492.0 //0,693*(51+2*560)*8
-#define zero_capacitance 315.0
-
-//ds18B20
-#define temperature_resolution 0.0625
-#define tempminusconst 4096
-#define tempminusthreshold 1000
-
-//HSF1000+DS8555
-#define preasure_ref 755.0
-#define preasure_conv 1020
 
 //configureADC
 #define MAX_TEMP_CHNL 12

@@ -55,37 +55,19 @@ void TIM2_IRQHandler(void)
 	//}
 }
 
-void DMA1_Channel1_IRQHandler    (void)
+void DMA1_Channel1_IRQHandler(void)
 {
   DMA_ClearFlag(DMA1_IT_TC1);
   setADCDMA_TransferComplete();  /* set flag_ADCDMA_TransferComplete global flag */
 }
 
-uint16_t read_cycle(uint16_t cur_tics, uint8_t neg_tic){
-	uint16_t cnt_tics;
- 	if (cur_tics < MAX_TICS) cnt_tics = 0;
-	if (neg_tic){
-		while (!GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)&&(cnt_tics<MAX_TICS)){
-			cnt_tics++;
-		}
-	}
-	else {
-		while (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)&&(cnt_tics<MAX_TICS)){
-			cnt_tics++;
-		}
-	}
- 	return cnt_tics;
-}
 
 int main(void){
-	uint8_t i, j;
-	uint8_t buf[5];
+	uint8_t buf[5], res;
 	//uint8_t i, curx, buftime;
 	//int dt;
 	char strDisp[25];
 	
-	uint16_t cnt;
-	uint16_t dt[83];
 	//uint32_t datetime;
 	
 	//static uint32_t toggle_ms = 0;
@@ -109,13 +91,7 @@ int main(void){
 	
 	//GotoXY(0,0);
 	Write_LCD("HUMIDITY SENSOR");
-	
-	
-	//num_ow = OW_Scan((uint8_t *)idbuf, 2);
-	
-  //OW_Send(OW_SEND_RESET, "\xcc\x44", 2, NULL, NULL, OW_NO_READ);
-	
-		
+			
 	
 	while(1){
 	
@@ -135,36 +111,8 @@ int main(void){
  		RTC_GetTime(RTC_Format_BIN, &RTCTimeStr);
  		RTC_GetDate(RTC_Format_BIN, &RTCDateStr);
 		
+		res = read_DHT11(buf);
 		
-		
- 		GPIO_LOW(GPIOA,GPIO_Pin_2);
-		Delay(18);
- 		GPIO_HIGH(GPIOA,GPIO_Pin_2);
-		
- 		cnt = 0; 
-		for(i=0;i<83 && cnt<10000;i++){
-			cnt = read_cycle(cnt, i & 1);
-			dt[i]= cnt;
-		}
-		
- 		j=0; j = 0;
- 		for(i=2;i<42;i++){
- 				if (dt[i*2]>20) {
- 					buf[j]= (buf[j]<<1) + 1;
- 					//dt[i*2]=1;
- 				}
- 				else {
- 					buf[j]=(buf[j]<<1);
- 					//dt[i*2]=0;
- 				}
-				if (!((i-2)%8) && (i>2)) {
- 					j++;
-				}
- 			}
- 				
-		
-	Delay(600);
-		GPIO_HIGH(GPIOA,GPIO_Pin_2);
 		
 		switch (mode){
 			case 0:				
@@ -181,23 +129,10 @@ int main(void){
  				sprintf(strDisp, "%02d/%02d/%02d %02d:%02d:%02d", RTCDateStr.RTC_Year, RTCDateStr.RTC_Month, RTCDateStr.RTC_Date, RTCTimeStr.RTC_Hours, RTCTimeStr.RTC_Minutes, RTCTimeStr.RTC_Seconds);
  				GotoXY(0,0);
  				Write_LCD((unsigned char *) strDisp);
-
-				//sprintf(strDisp, "t(core)=%d°C", temperature_C);
-				//sprintf(strDisp, "%d %02x%02x%02x%02x%02x", res, buf[0],buf[1],buf[2],buf[3],buf[4]);
-// 				for (i=0;i<6;i++){
-// 					if (i==0) sprintf(strDisp, "%d", dt[i]); else sprintf(strDisp, "%s %d", strDisp, dt[i]);
-// 				}
-				//sprintf(strDisp, "%d %d %d %d% d% d% d% d%", dt[4], dt[6],dt[8],dt[10],dt[12],dt[14],dt[16],dt[18]);
-				//sprintf(strDisp, "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %x%x", dt[0],dt[1],dt[2],dt[3],dt[4],dt[5],dt[6],dt[7], dt[8],dt[9],dt[10],dt[11],dt[12],dt[13],dt[14],dt[15], buf[0], buf[1]);
-				//sprintf(strDisp, "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %x %x", dt[4], dt[6],dt[8],dt[10],dt[12],dt[14],dt[16],dt[18], dt[20], dt[22],dt[24],dt[26],dt[28],dt[30],dt[32],dt[34], buf[0], buf[1]);
-				//sprintf(strDisp, "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %x %x", dt[4], dt[6],dt[8],dt[10],dt[12],dt[14],dt[16],dt[18], dt[20], dt[22],dt[24],dt[26],dt[28],dt[30],dt[32],dt[34], buf[0], buf[1]);
- 				//GotoXY(0,0);
- 				//Write_LCD((unsigned char *) strDisp);
-
-				//sprintf(strDisp, "%d %d %d %d% d% d% d% d%", dt[20], dt[22],dt[24],dt[26],dt[28],dt[30],dt[32],dt[34]);
-				//sprintf(strDisp, "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %x%x", dt[16],dt[17],dt[18],dt[19],dt[20],dt[21],dt[22],dt[23], dt[24],dt[25],dt[26],dt[27],dt[28],dt[29],dt[30],dt[31], buf[2], buf[3]);
-				//sprintf(strDisp, "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %x %x", dt[36],dt[38],dt[40],dt[42],dt[44],dt[46],dt[48],dt[50], dt[52],dt[54],dt[56],dt[58],dt[60],dt[62],dt[64],dt[66], buf[2], buf[4]);
-				sprintf(strDisp, "%d %d %d %d %x", buf[0], buf[1], buf[2], buf[3], buf[4]);
+				
+				if (res==DHT11_OK) sprintf(strDisp, "RH=%02d%% t=%dC           ", buf[0], buf[2]);
+				if (res==DHT11_CS_ERROR) sprintf(strDisp,"CHECKSUM ERROR");
+				if (res==DHT11_NO_CONN) sprintf(strDisp,"NO CONNECTED");
  				GotoXY(0,1);
  				Write_LCD((unsigned char *) strDisp);
 
@@ -352,15 +287,8 @@ void processTempData(void)
   /* Calculate voltage in V from average */
   voltage_V = (VREF/refAVG) * ADC_CONV;
 
-  /* Calculate preasure in mmHg */
-  preasure_V = (preasure_ref * preasureAVG) / preasure_conv;
 	
 }
-
-
-
-
-
 
 
 void Init_ext_LCD_GPIOs (void){

@@ -471,8 +471,8 @@ ARM Macro Assembler    Page 8
               00000000 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\Obj\st
-artup_stm32l1xx_md.d -o.\Obj\startup_stm32l1xx_md.o -IC:\PRG\keil\ARM\RV31\Inc 
--IC:\PRG\keil\ARM\CMSIS\Include -IC:\PRG\keil\ARM\Inc\ST\STM32L1xx --predefine=
+artup_stm32l1xx_md.d -o.\Obj\startup_stm32l1xx_md.o -IC:\PRG\Keil\ARM\RV31\Inc 
+-IC:\PRG\Keil\ARM\CMSIS\Include -IC:\PRG\Keil\ARM\Inc\ST\STM32L1xx --predefine=
 "__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --list=.\lst\startup_stm32l1xx_
 md.lst startup_stm32l1xx_md.s
 
