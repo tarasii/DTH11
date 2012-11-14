@@ -13297,12 +13297,12 @@ uint16_t read_cycle(uint16_t cur_tics, uint8_t neg_tic){
 uint8_t read_DHT11(uint8_t *buf){
 	uint16_t dt[42];
 	uint16_t cnt;
-	uint8_t i, check_sum, tmp; 
+	uint8_t i, check_sum; 
 	
 	
-	Delay(400);
+	Delay(500);
  	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRH = ((uint16_t)0x0004);
-	Delay(18);
+	Delay(20);
  	((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x20000) + 0x0000))->BSRRL = ((uint16_t)0x0004);
 	
   
@@ -13324,12 +13324,11 @@ uint8_t read_DHT11(uint8_t *buf){
 	
 	
  	for(i=2;i<42;i++){
-		tmp <<= 1;
+		(*buf) <<= 1;
   	if (dt[i]>20) {
-			tmp++;			
+			(*buf)++;
  		}
 		if (!((i-1)%8) && (i>2)) {
-			*buf = tmp;
 			buf++;
 		}
  	}

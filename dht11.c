@@ -19,12 +19,12 @@ uint16_t read_cycle(uint16_t cur_tics, uint8_t neg_tic){
 uint8_t read_DHT11(uint8_t *buf){
 	uint16_t dt[42];
 	uint16_t cnt;
-	uint8_t i, check_sum, tmp; 
+	uint8_t i, check_sum; 
 	
 	//reset DHT11
-	Delay(400);
+	Delay(500);
  	GPIO_LOW(GPIOA,GPIO_Pin_2);
-	Delay(18);
+	Delay(20);
  	GPIO_HIGH(GPIOA,GPIO_Pin_2);
 	
   //start reading	
@@ -39,24 +39,23 @@ uint8_t read_DHT11(uint8_t *buf){
 		}
 	}
 	
- 	//relese line
+ 	//release line
 	GPIO_HIGH(GPIOA,GPIO_Pin_2);
 	
 	if (cnt>=MAX_TICS) return DHT11_NO_CONN;
 	
 	//convert data
  	for(i=2;i<42;i++){
-		tmp <<= 1;
+		(*buf) <<= 1;
   	if (dt[i]>20) {
-			tmp++;			
+			(*buf)++;
  		}
 		if (!((i-1)%8) && (i>2)) {
-			*buf = tmp;
 			buf++;
 		}
  	}
 	
-	//calculating checksum
+	//calculate checksum
 	buf -= 5;
 	check_sum = 0;
  	for(i=0;i<4;i++){
